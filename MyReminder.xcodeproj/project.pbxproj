@@ -7,14 +7,23 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		848038D51DC8874400935D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848038D41DC8874400935D3E /* AppDelegate.swift */; };
-		848038D71DC8874400935D3E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848038D61DC8874400935D3E /* ViewController.swift */; };
-		848038DA1DC8874400935D3E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848038D81DC8874400935D3E /* Main.storyboard */; };
-		848038DD1DC8874400935D3E /* MyReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848038DB1DC8874400935D3E /* MyReminder.xcdatamodeld */; };
+		442F913645035D857B5BEBF3 /* Pods_MyReminderUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 0CDBCAEA470D00BF0DF53220 /* Pods_MyReminderUITests.framework */; };
+		755C5273FB7065C3A0247A98 /* Pods_MyReminder.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */; };
 		848038DF1DC8874400935D3E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 848038DE1DC8874400935D3E /* Assets.xcassets */; };
 		848038E21DC8874400935D3E /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 848038E01DC8874400935D3E /* LaunchScreen.storyboard */; };
 		848038ED1DC8874400935D3E /* MyReminderTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848038EC1DC8874400935D3E /* MyReminderTests.swift */; };
 		848038F81DC8874400935D3E /* MyReminderUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848038F71DC8874400935D3E /* MyReminderUITests.swift */; };
+		848039061DC88A3E00935D3E /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 848039051DC88A3E00935D3E /* GoogleService-Info.plist */; };
+		848039231DC88EA000935D3E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039091DC88EA000935D3E /* AppDelegate.swift */; };
+		848039241DC88EA000935D3E /* Common.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480390C1DC88EA000935D3E /* Common.swift */; };
+		848039251DC88EA000935D3E /* Define.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480390D1DC88EA000935D3E /* Define.swift */; };
+		848039261DC88EA000935D3E /* Helpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480390E1DC88EA000935D3E /* Helpers.swift */; };
+		848039271DC88EA000935D3E /* Message.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480390F1DC88EA000935D3E /* Message.swift */; };
+		848039281DC88EA000935D3E /* MyReminder.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 848039131DC88EA000935D3E /* MyReminder.xcdatamodeld */; };
+		848039291DC88EA000935D3E /* GGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480391B1DC88EA000935D3E /* GGNavigationController.swift */; };
+		8480392A1DC88EA000935D3E /* GGParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480391D1DC88EA000935D3E /* GGParentVC.swift */; };
+		8480392B1DC88EA000935D3E /* GGTabbarParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480391F1DC88EA000935D3E /* GGTabbarParentVC.swift */; };
+		DA7EF86ECE90F514CF5F6F02 /* Pods_MyReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -35,11 +44,11 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		0CDBCAEA470D00BF0DF53220 /* Pods_MyReminderUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminderUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		32AE9CDDF5616CC7887E4EDC /* Pods-MyReminderUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.debug.xcconfig"; sourceTree = "<group>"; };
+		6D8E4DF6A7BC9515090FF926 /* Pods-MyReminder.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminder.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder.release.xcconfig"; sourceTree = "<group>"; };
+		7F09E08B535D5236AB717A6E /* Pods-MyReminderTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests.debug.xcconfig"; sourceTree = "<group>"; };
 		848038D11DC8874300935D3E /* MyReminder.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MyReminder.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		848038D41DC8874400935D3E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		848038D61DC8874400935D3E /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
-		848038D91DC8874400935D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
-		848038DC1DC8874400935D3E /* MyReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyReminder.xcdatamodel; sourceTree = "<group>"; };
 		848038DE1DC8874400935D3E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		848038E11DC8874400935D3E /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		848038E31DC8874400935D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -49,6 +58,21 @@
 		848038F31DC8874400935D3E /* MyReminderUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = MyReminderUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		848038F71DC8874400935D3E /* MyReminderUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyReminderUITests.swift; sourceTree = "<group>"; };
 		848038F91DC8874400935D3E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		848039051DC88A3E00935D3E /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		848039091DC88EA000935D3E /* AppDelegate.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		8480390C1DC88EA000935D3E /* Common.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Common.swift; sourceTree = "<group>"; };
+		8480390D1DC88EA000935D3E /* Define.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Define.swift; sourceTree = "<group>"; };
+		8480390E1DC88EA000935D3E /* Helpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helpers.swift; sourceTree = "<group>"; };
+		8480390F1DC88EA000935D3E /* Message.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Message.swift; sourceTree = "<group>"; };
+		848039141DC88EA000935D3E /* MyReminder.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = MyReminder.xcdatamodel; sourceTree = "<group>"; };
+		8480391B1DC88EA000935D3E /* GGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGNavigationController.swift; sourceTree = "<group>"; };
+		8480391D1DC88EA000935D3E /* GGParentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGParentVC.swift; sourceTree = "<group>"; };
+		8480391F1DC88EA000935D3E /* GGTabbarParentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGTabbarParentVC.swift; sourceTree = "<group>"; };
+		8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
+		F313295730AE0BCD82FDCFDD /* Pods-MyReminderTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests.release.xcconfig"; sourceTree = "<group>"; };
+		FEA38C3053A3FA98CDA4918D /* Pods-MyReminder.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminder.debug.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -56,6 +80,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				755C5273FB7065C3A0247A98 /* Pods_MyReminder.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -63,6 +88,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				DA7EF86ECE90F514CF5F6F02 /* Pods_MyReminderTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -70,12 +96,36 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				442F913645035D857B5BEBF3 /* Pods_MyReminderUITests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		1EC77F84D3C6937D8A954AB9 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */,
+				A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */,
+				0CDBCAEA470D00BF0DF53220 /* Pods_MyReminderUITests.framework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		28F35115A3F4502619629170 /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				FEA38C3053A3FA98CDA4918D /* Pods-MyReminder.debug.xcconfig */,
+				6D8E4DF6A7BC9515090FF926 /* Pods-MyReminder.release.xcconfig */,
+				7F09E08B535D5236AB717A6E /* Pods-MyReminderTests.debug.xcconfig */,
+				F313295730AE0BCD82FDCFDD /* Pods-MyReminderTests.release.xcconfig */,
+				32AE9CDDF5616CC7887E4EDC /* Pods-MyReminderUITests.debug.xcconfig */,
+				C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */,
+			);
+			name = Pods;
+			sourceTree = "<group>";
+		};
 		848038C81DC8874300935D3E = {
 			isa = PBXGroup;
 			children = (
@@ -83,6 +133,8 @@
 				848038EB1DC8874400935D3E /* MyReminderTests */,
 				848038F61DC8874400935D3E /* MyReminderUITests */,
 				848038D21DC8874300935D3E /* Products */,
+				28F35115A3F4502619629170 /* Pods */,
+				1EC77F84D3C6937D8A954AB9 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -99,13 +151,12 @@
 		848038D31DC8874400935D3E /* MyReminder */ = {
 			isa = PBXGroup;
 			children = (
-				848038D41DC8874400935D3E /* AppDelegate.swift */,
-				848038D61DC8874400935D3E /* ViewController.swift */,
-				848038D81DC8874400935D3E /* Main.storyboard */,
+				848039071DC88EA000935D3E /* Classes */,
+				848039201DC88EA000935D3E /* Resources */,
 				848038DE1DC8874400935D3E /* Assets.xcassets */,
 				848038E01DC8874400935D3E /* LaunchScreen.storyboard */,
 				848038E31DC8874400935D3E /* Info.plist */,
-				848038DB1DC8874400935D3E /* MyReminder.xcdatamodeld */,
+				848039051DC88A3E00935D3E /* GoogleService-Info.plist */,
 			);
 			path = MyReminder;
 			sourceTree = "<group>";
@@ -128,6 +179,157 @@
 			path = MyReminderUITests;
 			sourceTree = "<group>";
 		};
+		848039071DC88EA000935D3E /* Classes */ = {
+			isa = PBXGroup;
+			children = (
+				848039081DC88EA000935D3E /* AppDelegate */,
+				8480390A1DC88EA000935D3E /* Helpers */,
+				848039111DC88EA000935D3E /* Models */,
+				848039161DC88EA000935D3E /* ViewControllers */,
+			);
+			path = Classes;
+			sourceTree = "<group>";
+		};
+		848039081DC88EA000935D3E /* AppDelegate */ = {
+			isa = PBXGroup;
+			children = (
+				848039091DC88EA000935D3E /* AppDelegate.swift */,
+			);
+			path = AppDelegate;
+			sourceTree = "<group>";
+		};
+		8480390A1DC88EA000935D3E /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				8480390B1DC88EA000935D3E /* Common */,
+				848039101DC88EA000935D3E /* Libraries */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
+		8480390B1DC88EA000935D3E /* Common */ = {
+			isa = PBXGroup;
+			children = (
+				8480390C1DC88EA000935D3E /* Common.swift */,
+				8480390D1DC88EA000935D3E /* Define.swift */,
+				8480390E1DC88EA000935D3E /* Helpers.swift */,
+				8480390F1DC88EA000935D3E /* Message.swift */,
+			);
+			path = Common;
+			sourceTree = "<group>";
+		};
+		848039101DC88EA000935D3E /* Libraries */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Libraries;
+			sourceTree = "<group>";
+		};
+		848039111DC88EA000935D3E /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				848039121DC88EA000935D3E /* CoreData */,
+				848039151DC88EA000935D3E /* Objects */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		848039121DC88EA000935D3E /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				848039131DC88EA000935D3E /* MyReminder.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		848039151DC88EA000935D3E /* Objects */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Objects;
+			sourceTree = "<group>";
+		};
+		848039161DC88EA000935D3E /* ViewControllers */ = {
+			isa = PBXGroup;
+			children = (
+				848039171DC88EA000935D3E /* CustomControllers */,
+				848039181DC88EA000935D3E /* MainControllers */,
+				848039191DC88EA000935D3E /* ParentControllers */,
+			);
+			path = ViewControllers;
+			sourceTree = "<group>";
+		};
+		848039171DC88EA000935D3E /* CustomControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = CustomControllers;
+			sourceTree = "<group>";
+		};
+		848039181DC88EA000935D3E /* MainControllers */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = MainControllers;
+			sourceTree = "<group>";
+		};
+		848039191DC88EA000935D3E /* ParentControllers */ = {
+			isa = PBXGroup;
+			children = (
+				8480391A1DC88EA000935D3E /* GGNavigationController */,
+				8480391C1DC88EA000935D3E /* GGParentVC */,
+				8480391E1DC88EA000935D3E /* GGTabbarParentVC */,
+			);
+			path = ParentControllers;
+			sourceTree = "<group>";
+		};
+		8480391A1DC88EA000935D3E /* GGNavigationController */ = {
+			isa = PBXGroup;
+			children = (
+				8480391B1DC88EA000935D3E /* GGNavigationController.swift */,
+			);
+			path = GGNavigationController;
+			sourceTree = "<group>";
+		};
+		8480391C1DC88EA000935D3E /* GGParentVC */ = {
+			isa = PBXGroup;
+			children = (
+				8480391D1DC88EA000935D3E /* GGParentVC.swift */,
+			);
+			path = GGParentVC;
+			sourceTree = "<group>";
+		};
+		8480391E1DC88EA000935D3E /* GGTabbarParentVC */ = {
+			isa = PBXGroup;
+			children = (
+				8480391F1DC88EA000935D3E /* GGTabbarParentVC.swift */,
+			);
+			path = GGTabbarParentVC;
+			sourceTree = "<group>";
+		};
+		848039201DC88EA000935D3E /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				848039211DC88EA000935D3E /* Fonts */,
+				848039221DC88EA000935D3E /* Images */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		848039211DC88EA000935D3E /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
+		848039221DC88EA000935D3E /* Images */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			path = Images;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -135,9 +337,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848038FC1DC8874400935D3E /* Build configuration list for PBXNativeTarget "MyReminder" */;
 			buildPhases = (
+				E4E1B0C493349AEC7597AC0B /* [CP] Check Pods Manifest.lock */,
 				848038CD1DC8874300935D3E /* Sources */,
 				848038CE1DC8874300935D3E /* Frameworks */,
 				848038CF1DC8874300935D3E /* Resources */,
+				85E040CA0B7A4709791BDDBA /* [CP] Embed Pods Frameworks */,
+				4BBE05684C7D8640FF95E8A5 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -152,9 +357,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848038FF1DC8874400935D3E /* Build configuration list for PBXNativeTarget "MyReminderTests" */;
 			buildPhases = (
+				502EB48589A976C13EEC07AD /* [CP] Check Pods Manifest.lock */,
 				848038E41DC8874400935D3E /* Sources */,
 				848038E51DC8874400935D3E /* Frameworks */,
 				848038E61DC8874400935D3E /* Resources */,
+				21D2ECF5A898D4006A6AF83E /* [CP] Embed Pods Frameworks */,
+				C3FBED3F765EC0352124200D /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -170,9 +378,11 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 848039021DC8874400935D3E /* Build configuration list for PBXNativeTarget "MyReminderUITests" */;
 			buildPhases = (
+				84FF80576DCDB8815D73A9C1 /* [CP] Check Pods Manifest.lock */,
 				848038EF1DC8874400935D3E /* Sources */,
 				848038F01DC8874400935D3E /* Frameworks */,
 				848038F11DC8874400935D3E /* Resources */,
+				8DEA6EE98D375AFC26067986 /* [CP] Copy Pods Resources */,
 			);
 			buildRules = (
 			);
@@ -233,8 +443,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				848038E21DC8874400935D3E /* LaunchScreen.storyboard in Resources */,
+				848039061DC88A3E00935D3E /* GoogleService-Info.plist in Resources */,
 				848038DF1DC8874400935D3E /* Assets.xcassets in Resources */,
-				848038DA1DC8874400935D3E /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -254,14 +464,143 @@
 		};
 /* End PBXResourcesBuildPhase section */
 
+/* Begin PBXShellScriptBuildPhase section */
+		21D2ECF5A898D4006A6AF83E /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		4BBE05684C7D8640FF95E8A5 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		502EB48589A976C13EEC07AD /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		84FF80576DCDB8815D73A9C1 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+		85E040CA0B7A4709791BDDBA /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		8DEA6EE98D375AFC26067986 /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		C3FBED3F765EC0352124200D /* [CP] Copy Pods Resources */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Copy Pods Resources";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-resources.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		E4E1B0C493349AEC7597AC0B /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_ROOT}/../Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [[ $? != 0 ]] ; then\n    cat << EOM\nerror: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\nEOM\n    exit 1\nfi\n";
+			showEnvVarsInLog = 0;
+		};
+/* End PBXShellScriptBuildPhase section */
+
 /* Begin PBXSourcesBuildPhase section */
 		848038CD1DC8874300935D3E /* Sources */ = {
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				848038D71DC8874400935D3E /* ViewController.swift in Sources */,
-				848038DD1DC8874400935D3E /* MyReminder.xcdatamodeld in Sources */,
-				848038D51DC8874400935D3E /* AppDelegate.swift in Sources */,
+				848039291DC88EA000935D3E /* GGNavigationController.swift in Sources */,
+				848039241DC88EA000935D3E /* Common.swift in Sources */,
+				848039281DC88EA000935D3E /* MyReminder.xcdatamodeld in Sources */,
+				848039251DC88EA000935D3E /* Define.swift in Sources */,
+				8480392A1DC88EA000935D3E /* GGParentVC.swift in Sources */,
+				8480392B1DC88EA000935D3E /* GGTabbarParentVC.swift in Sources */,
+				848039271DC88EA000935D3E /* Message.swift in Sources */,
+				848039231DC88EA000935D3E /* AppDelegate.swift in Sources */,
+				848039261DC88EA000935D3E /* Helpers.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -297,14 +636,6 @@
 /* End PBXTargetDependency section */
 
 /* Begin PBXVariantGroup section */
-		848038D81DC8874400935D3E /* Main.storyboard */ = {
-			isa = PBXVariantGroup;
-			children = (
-				848038D91DC8874400935D3E /* Base */,
-			);
-			name = Main.storyboard;
-			sourceTree = "<group>";
-		};
 		848038E01DC8874400935D3E /* LaunchScreen.storyboard */ = {
 			isa = PBXVariantGroup;
 			children = (
@@ -401,28 +732,31 @@
 		};
 		848038FD1DC8874400935D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = FEA38C3053A3FA98CDA4918D /* Pods-MyReminder.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Greenglobal.MyReminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.myreminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Debug;
 		};
 		848038FE1DC8874400935D3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 6D8E4DF6A7BC9515090FF926 /* Pods-MyReminder.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyReminder/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = Greenglobal.MyReminder;
+				PRODUCT_BUNDLE_IDENTIFIER = com.memo.myreminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};
 			name = Release;
 		};
 		848039001DC8874400935D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 7F09E08B535D5236AB717A6E /* Pods-MyReminderTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MyReminderTests/Info.plist;
@@ -435,6 +769,7 @@
 		};
 		848039011DC8874400935D3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = F313295730AE0BCD82FDCFDD /* Pods-MyReminderTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				INFOPLIST_FILE = MyReminderTests/Info.plist;
@@ -447,6 +782,7 @@
 		};
 		848039031DC8874400935D3E /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 32AE9CDDF5616CC7887E4EDC /* Pods-MyReminderUITests.debug.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MyReminderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -458,6 +794,7 @@
 		};
 		848039041DC8874400935D3E /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */;
 			buildSettings = {
 				INFOPLIST_FILE = MyReminderUITests/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks @loader_path/Frameworks";
@@ -486,6 +823,7 @@
 				848038FE1DC8874400935D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848038FF1DC8874400935D3E /* Build configuration list for PBXNativeTarget "MyReminderTests" */ = {
 			isa = XCConfigurationList;
@@ -494,6 +832,7 @@
 				848039011DC8874400935D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		848039021DC8874400935D3E /* Build configuration list for PBXNativeTarget "MyReminderUITests" */ = {
 			isa = XCConfigurationList;
@@ -502,16 +841,17 @@
 				848039041DC8874400935D3E /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		848038DB1DC8874400935D3E /* MyReminder.xcdatamodeld */ = {
+		848039131DC88EA000935D3E /* MyReminder.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				848038DC1DC8874400935D3E /* MyReminder.xcdatamodel */,
+				848039141DC88EA000935D3E /* MyReminder.xcdatamodel */,
 			);
-			currentVersion = 848038DC1DC8874400935D3E /* MyReminder.xcdatamodel */;
+			currentVersion = 848039141DC88EA000935D3E /* MyReminder.xcdatamodel */;
 			path = MyReminder.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;

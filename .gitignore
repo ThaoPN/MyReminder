@@ -1,0 +1,64 @@
+MyReminder.xcworkspace/contents.xcworkspacedata
+Pods/Manifest.lock
+Pods/Firebase/README.md
+Pods/Firebase/Analytics/Sources/Firebase.h
+Pods/Firebase/Analytics/Sources/module.modulemap
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/FirebaseAnalytics
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics+AppDelegate.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalytics.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRAnalyticsConfiguration.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRApp.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRConfiguration.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FirebaseAnalytics.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIREventNames.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIROptions.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRParameterNames.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Headers/FIRUserPropertyNames.h
+Pods/FirebaseAnalytics/Frameworks/frameworks/FirebaseAnalytics.framework/Modules/module.modulemap
+Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/FirebaseInstanceID
+Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FirebaseInstanceID.h
+Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Headers/FIRInstanceID.h
+Pods/FirebaseInstanceID/Frameworks/frameworks/FirebaseInstanceID.framework/Modules/module.modulemap
+Pods/FirebaseInstanceID/Sources/FIRInstanceID.h
+Pods/GoogleInterchangeUtilities/Frameworks/GoogleInterchangeUtilities.framework/GoogleInterchangeUtilities
+Pods/GoogleSymbolUtilities/Frameworks/GoogleSymbolUtilities.framework/GoogleSymbolUtilities
+Pods/GoogleUtilities/Frameworks/GoogleUtilities.framework/GoogleUtilities
+Pods/Headers/Private/Firebase/Firebase.h
+Pods/Headers/Private/FirebaseInstanceID/FIRInstanceID.h
+Pods/Headers/Public/Firebase/Firebase.h
+Pods/Headers/Public/FirebaseInstanceID/FIRInstanceID.h
+Pods/Pods.xcodeproj/project.pbxproj
+Pods/Pods.xcodeproj/xcuserdata/admin.xcuserdatad/xcschemes/Pods-MyReminder.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/admin.xcuserdatad/xcschemes/Pods-MyReminderTests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/admin.xcuserdatad/xcschemes/Pods-MyReminderUITests.xcscheme
+Pods/Pods.xcodeproj/xcuserdata/admin.xcuserdatad/xcschemes/xcschememanagement.plist
+Pods/Target Support Files/Pods-MyReminder/Info.plist
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-acknowledgements.markdown
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-acknowledgements.plist
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-dummy.m
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-frameworks.sh
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-resources.sh
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder-umbrella.h
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder.debug.xcconfig
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder.modulemap
+Pods/Target Support Files/Pods-MyReminder/Pods-MyReminder.release.xcconfig
+Pods/Target Support Files/Pods-MyReminderTests/Info.plist
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-acknowledgements.markdown
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-acknowledgements.plist
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-dummy.m
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-frameworks.sh
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-resources.sh
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests-umbrella.h
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests.debug.xcconfig
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests.modulemap
+Pods/Target Support Files/Pods-MyReminderTests/Pods-MyReminderTests.release.xcconfig
+Pods/Target Support Files/Pods-MyReminderUITests/Info.plist
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-acknowledgements.markdown
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-acknowledgements.plist
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-dummy.m
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-frameworks.sh
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-resources.sh
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-umbrella.h
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.debug.xcconfig
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.modulemap
+Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig
