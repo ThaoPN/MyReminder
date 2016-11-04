@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpVC" customModule="MyReminder" customModuleProvider="target">
+            <connections>
+                <outlet property="txfEmail" destination="LZ0-wV-rmf" id="eFN-yi-U9g"/>
+                <outlet property="txfPassword" destination="WUn-PJ-Qwb" id="3Bf-Gw-Dx0"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Email" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="LZ0-wV-rmf">
+                    <rect key="frame" x="20" y="200" width="560" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Password" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="WUn-PJ-Qwb">
+                    <rect key="frame" x="20" y="250" width="560" height="30"/>
+                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                    <textInputTraits key="textInputTraits"/>
+                </textField>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="RHP-qf-URF">
+                    <rect key="frame" x="20" y="300" width="560" height="30"/>
+                    <state key="normal" title="Sign Up"/>
+                    <connections>
+                        <action selector="tapToSignUp:" destination="-1" eventType="touchUpInside" id="tWy-ed-69n"/>
+                    </connections>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EcD-aD-x2w">
+                    <rect key="frame" x="0.0" y="0.0" width="600" height="64"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dLa-fI-6EB">
+                            <rect key="frame" x="0.0" y="17" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="YJI-pw-8sq"/>
+                                <constraint firstAttribute="height" constant="50" id="tRI-J3-DUA"/>
+                            </constraints>
+                            <state key="normal" image="ic_button_close"/>
+                            <connections>
+                                <action selector="tapToClose:" destination="-1" eventType="touchUpInside" id="ypO-Kz-Wt6"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.59999999999999998" green="0.28235294119999998" blue="0.87058823529999996" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="dLa-fI-6EB" firstAttribute="leading" secondItem="EcD-aD-x2w" secondAttribute="leading" id="4TL-3G-vqx"/>
+                        <constraint firstAttribute="height" constant="64" id="spT-tN-5nQ"/>
+                        <constraint firstItem="dLa-fI-6EB" firstAttribute="centerY" secondItem="EcD-aD-x2w" secondAttribute="centerY" constant="10" id="xGC-mw-2lk"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="LZ0-wV-rmf" secondAttribute="trailing" constant="20" id="3dp-pm-pnG"/>
+                <constraint firstItem="RHP-qf-URF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="4cZ-ew-Bb1"/>
+                <constraint firstItem="EcD-aD-x2w" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="7H5-YU-Ny9"/>
+                <constraint firstItem="LZ0-wV-rmf" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="MAV-Sp-jM1"/>
+                <constraint firstItem="EcD-aD-x2w" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="PfV-s4-nJA"/>
+                <constraint firstItem="LZ0-wV-rmf" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="200" id="SUH-1q-A1g"/>
+                <constraint firstAttribute="trailing" secondItem="WUn-PJ-Qwb" secondAttribute="trailing" constant="20" id="bUE-RS-nKq"/>
+                <constraint firstItem="RHP-qf-URF" firstAttribute="top" secondItem="WUn-PJ-Qwb" secondAttribute="bottom" constant="20" id="dsh-IR-Enc"/>
+                <constraint firstItem="WUn-PJ-Qwb" firstAttribute="top" secondItem="LZ0-wV-rmf" secondAttribute="bottom" constant="20" id="lXx-Rm-lgp"/>
+                <constraint firstAttribute="trailing" secondItem="RHP-qf-URF" secondAttribute="trailing" constant="20" id="rZ1-M7-gGb"/>
+                <constraint firstAttribute="trailing" secondItem="EcD-aD-x2w" secondAttribute="trailing" id="tx8-9S-sxv"/>
+                <constraint firstItem="WUn-PJ-Qwb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="ufM-B4-Kvu"/>
+            </constraints>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_button_close" width="16" height="16"/>
+    </resources>
+</document>

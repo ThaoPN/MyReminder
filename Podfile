@@ -5,7 +5,9 @@ target 'MyReminder' do
   # Comment this line if you're not using Swift and don't want to use dynamic frameworks
   use_frameworks!
 
-  pod 'Firebase/Core'
+  pod 'Firebase/Database'
+  pod 'ObjectMapper', '~> 1.3'
+  pod 'PKHUD', '~> 3.1.0'
 
   # Pods for MyReminder
 

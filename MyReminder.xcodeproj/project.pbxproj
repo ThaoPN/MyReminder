@@ -23,6 +23,15 @@
 		848039291DC88EA000935D3E /* GGNavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480391B1DC88EA000935D3E /* GGNavigationController.swift */; };
 		8480392A1DC88EA000935D3E /* GGParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480391D1DC88EA000935D3E /* GGParentVC.swift */; };
 		8480392B1DC88EA000935D3E /* GGTabbarParentVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480391F1DC88EA000935D3E /* GGTabbarParentVC.swift */; };
+		8480392D1DC97E7D00935D3E /* Note.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480392C1DC97E7D00935D3E /* Note.swift */; };
+		8480392F1DC97E9F00935D3E /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480392E1DC97E9F00935D3E /* User.swift */; };
+		848039331DCA36BA00935D3E /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039311DCA36BA00935D3E /* SignUpVC.swift */; };
+		848039341DCA36BA00935D3E /* SignUpVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039321DCA36BA00935D3E /* SignUpVC.xib */; };
+		848039561DCB882000935D3E /* dh_loading.png in Resources */ = {isa = PBXBuildFile; fileRef = 848039531DCB882000935D3E /* dh_loading.png */; };
+		848039571DCB882100935D3E /* dh_loading@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 848039541DCB882000935D3E /* dh_loading@2x.png */; };
+		848039581DCB882100935D3E /* DHIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039551DCB882000935D3E /* DHIndicator.swift */; };
+		8480395B1DCB94CB00935D3E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039591DCB94CB00935D3E /* SignInVC.swift */; };
+		8480395C1DCB94CB00935D3E /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480395A1DCB94CB00935D3E /* SignInVC.xib */; };
 		DA7EF86ECE90F514CF5F6F02 /* Pods_MyReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -68,6 +77,15 @@
 		8480391B1DC88EA000935D3E /* GGNavigationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGNavigationController.swift; sourceTree = "<group>"; };
 		8480391D1DC88EA000935D3E /* GGParentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGParentVC.swift; sourceTree = "<group>"; };
 		8480391F1DC88EA000935D3E /* GGTabbarParentVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = GGTabbarParentVC.swift; sourceTree = "<group>"; };
+		8480392C1DC97E7D00935D3E /* Note.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Note.swift; sourceTree = "<group>"; };
+		8480392E1DC97E9F00935D3E /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		848039311DCA36BA00935D3E /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
+		848039321DCA36BA00935D3E /* SignUpVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignUpVC.xib; sourceTree = "<group>"; };
+		848039531DCB882000935D3E /* dh_loading.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = dh_loading.png; sourceTree = "<group>"; };
+		848039541DCB882000935D3E /* dh_loading@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "dh_loading@2x.png"; sourceTree = "<group>"; };
+		848039551DCB882000935D3E /* DHIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHIndicator.swift; sourceTree = "<group>"; };
+		848039591DCB94CB00935D3E /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
+		8480395A1DCB94CB00935D3E /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
 		8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -221,6 +239,7 @@
 		848039101DC88EA000935D3E /* Libraries */ = {
 			isa = PBXGroup;
 			children = (
+				848039521DCB882000935D3E /* DHIndicator */,
 			);
 			path = Libraries;
 			sourceTree = "<group>";
@@ -245,6 +264,8 @@
 		848039151DC88EA000935D3E /* Objects */ = {
 			isa = PBXGroup;
 			children = (
+				8480392C1DC97E7D00935D3E /* Note.swift */,
+				8480392E1DC97E9F00935D3E /* User.swift */,
 			);
 			path = Objects;
 			sourceTree = "<group>";
@@ -269,6 +290,8 @@
 		848039181DC88EA000935D3E /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				848039511DCB6FF700935D3E /* SignInVC */,
+				848039301DCA369A00935D3E /* SignUpVC */,
 			);
 			path = MainControllers;
 			sourceTree = "<group>";
@@ -328,6 +351,34 @@
 			children = (
 			);
 			path = Images;
+			sourceTree = "<group>";
+		};
+		848039301DCA369A00935D3E /* SignUpVC */ = {
+			isa = PBXGroup;
+			children = (
+				848039311DCA36BA00935D3E /* SignUpVC.swift */,
+				848039321DCA36BA00935D3E /* SignUpVC.xib */,
+			);
+			path = SignUpVC;
+			sourceTree = "<group>";
+		};
+		848039511DCB6FF700935D3E /* SignInVC */ = {
+			isa = PBXGroup;
+			children = (
+				848039591DCB94CB00935D3E /* SignInVC.swift */,
+				8480395A1DCB94CB00935D3E /* SignInVC.xib */,
+			);
+			path = SignInVC;
+			sourceTree = "<group>";
+		};
+		848039521DCB882000935D3E /* DHIndicator */ = {
+			isa = PBXGroup;
+			children = (
+				848039531DCB882000935D3E /* dh_loading.png */,
+				848039541DCB882000935D3E /* dh_loading@2x.png */,
+				848039551DCB882000935D3E /* DHIndicator.swift */,
+			);
+			path = DHIndicator;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -442,9 +493,13 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848039341DCA36BA00935D3E /* SignUpVC.xib in Resources */,
+				848039571DCB882100935D3E /* dh_loading@2x.png in Resources */,
 				848038E21DC8874400935D3E /* LaunchScreen.storyboard in Resources */,
 				848039061DC88A3E00935D3E /* GoogleService-Info.plist in Resources */,
 				848038DF1DC8874400935D3E /* Assets.xcassets in Resources */,
+				848039561DCB882000935D3E /* dh_loading.png in Resources */,
+				8480395C1DCB94CB00935D3E /* SignInVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -596,11 +651,16 @@
 				848039241DC88EA000935D3E /* Common.swift in Sources */,
 				848039281DC88EA000935D3E /* MyReminder.xcdatamodeld in Sources */,
 				848039251DC88EA000935D3E /* Define.swift in Sources */,
+				8480395B1DCB94CB00935D3E /* SignInVC.swift in Sources */,
+				848039331DCA36BA00935D3E /* SignUpVC.swift in Sources */,
 				8480392A1DC88EA000935D3E /* GGParentVC.swift in Sources */,
+				8480392D1DC97E7D00935D3E /* Note.swift in Sources */,
 				8480392B1DC88EA000935D3E /* GGTabbarParentVC.swift in Sources */,
+				848039581DCB882100935D3E /* DHIndicator.swift in Sources */,
 				848039271DC88EA000935D3E /* Message.swift in Sources */,
 				848039231DC88EA000935D3E /* AppDelegate.swift in Sources */,
 				848039261DC88EA000935D3E /* Helpers.swift in Sources */,
+				8480392F1DC97E9F00935D3E /* User.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -736,6 +796,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyReminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.memo.myreminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";
@@ -748,6 +809,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				INFOPLIST_FILE = MyReminder/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.memo.myreminder;
 				PRODUCT_NAME = "$(TARGET_NAME)";

@@ -1,11 +1,3 @@
-//
-//  Common.swift
-//  GGStructureSwift
-//
-//  Created by Đăng Hoà on 8/13/15.
-//  Copyright (c) 2015 ___GREENGLOBAL___. All rights reserved.
-//
-
 import UIKit
 import PKHUD
 import SystemConfiguration
@@ -82,7 +74,7 @@ class Common: NSObject {
   }
 
   class func showAlertWithUIAlertView(message: String!) -> Void {
-    let alertView: UIAlertView = UIAlertView(title: APP_NAME,
+    let alertView: UIAlertView = UIAlertView(title: appName,
       message: message,
       delegate: nil,
       cancelButtonTitle: "OK")
@@ -95,7 +87,7 @@ class Common: NSObject {
 
   class func showAlert(message: String!) -> Void {
 
-    let alertView: UIAlertController = UIAlertController(title: APP_NAME, message: message, preferredStyle:UIAlertControllerStyle.Alert)
+    let alertView: UIAlertController = UIAlertController(title: appName, message: message, preferredStyle:UIAlertControllerStyle.Alert)
     let action = UIAlertAction(title: "OK", style: .Default) { _ in
       // Put here any code that you would like to execute when
       // the user taps that OK button (may be empty in your case if that's just
@@ -109,7 +101,7 @@ class Common: NSObject {
 
   class func showAlertWithVC(message: String!, onVC vc: UIViewController) -> Void {
 
-    let alertView: UIAlertController = UIAlertController(title: APP_NAME, message: message, preferredStyle:UIAlertControllerStyle.Alert)
+    let alertView: UIAlertController = UIAlertController(title: appName, message: message, preferredStyle:UIAlertControllerStyle.Alert)
     let action = UIAlertAction(title: "OK", style: .Default) { _ in
       // Put here any code that you would like to execute when
       // the user taps that OK button (may be empty in your case if that's just
@@ -315,7 +307,7 @@ class Common: NSObject {
   class func formatStringWithFormat(format: String, withDate date: NSDate, timeZone: NSTimeZone = NSTimeZone(name: "UTC")!) -> String {
 
     let dateformater = NSDateFormatter()
-    
+
     dateformater.locale = NSLocale(localeIdentifier: "en_US")
     dateformater.timeZone = timeZone
     dateformater.dateFormat = format
@@ -646,15 +638,6 @@ class Common: NSObject {
     return format.stringFromDate(date)
   }
 
-  class func formatDate(date: NSDate) -> String {
-
-    let stringMonthStart = DHCalendarData.nameMonthWithNumberMonth(DHCalendarData.getMonthWithDate(date))
-
-    let formatDate = stringMonthStart + " \(DHCalendarData.getDayWithDate(date))" + ", " + "\(DHCalendarData.getYearWithDate(date))"
-
-    return formatDate
-  }
-
   class func formatTime(time: String) -> String {
     let AM = "am"
     let PM = "pm"
@@ -746,51 +729,6 @@ class Common: NSObject {
     return strFormated
   }
 
-//  class func calculateAge(birthday: NSDate) -> Int {
-//    let year = NSCalendar.currentCalendar().components(.Year, fromDate: birthday, toDate: NSDate(), options: [])
-//    let month = NSCalendar.currentCalendar().components(.Month, fromDate: birthday, toDate: NSDate(), options: [])
-//    let day = NSCalendar.currentCalendar().components(.Day, fromDate: birthday, toDate: NSDate(), options: [])
-//    print(year.year)
-//    print(month.month)
-//    print(day.day)
-//
-//    return NSCalendar.currentCalendar().components(.Year, fromDate: birthday, toDate: NSDate(), options: []).year
-//  }
-
-  class func calculateAge(birthday: NSDate) -> Int {
-    let calendar = NSCalendar.currentCalendar()
-    if let timeZone = NSTimeZone(name: "UTC") {
-      calendar.timeZone = timeZone
-    }
-    let yearComponentNow = calendar.components(.Year, fromDate: NSDate())
-//    let monthComponentNow = calendar.components(.Month, fromDate: NSDate())
-//    let dayComponentNow = calendar.components(.Day, fromDate: NSDate())
-
-    let yearComponentBirth = calendar.components(.Year, fromDate: birthday)
-//    let monthComponentBirth = calendar.components(.Month, fromDate: birthday)
-//    let dayComponentBirth = calendar.components(.Day, fromDate: birthday)
-
-//    if (monthComponentNow.month < monthComponentBirth.month) || (dayComponentNow.day < dayComponentBirth.day) {
-//      return yearComponentNow.year - yearComponentBirth.year - 1
-//    } else {
-//
-//    }
-
-    return yearComponentNow.year - yearComponentBirth.year
-  }
-
-  class func caculateAge(birthday: String) -> Int {
-    if birthday == "" {
-      return 0
-    }
-
-    let dateFormatter = getDateFormat()
-
-    guard let date = dateFormatter.dateFromString(birthday) else { return 0 }
-
-    return Common.calculateAge(date)
-  }
-
   class func convertMinuteToHour(m: Float) -> String {
     let h = (m - (m % 60))/60
     let mm = m % 60
@@ -809,58 +747,6 @@ class Common: NSObject {
       return "\(Int(h))\(suffixHour)"
     }
     return "\(Int(h))\(suffixHour) \(Int(mm))\(suffixMinute)"
-  }
-
-  class func convertTimeToISOString(time: Time, date: NSDate) -> String {
-
-    var strTime = ""
-    if time.nameTime.containsString("AM") {
-      strTime = time.nameTime.stringByReplacingOccurrencesOfString(" AM", withString: ":00")
-    } else {
-      strTime = time.nameTime.stringByReplacingOccurrencesOfString(" PM", withString: ":00")
-
-      let array = strTime.componentsSeparatedByString(":")
-
-      if array.count == 3 {
-        strTime = "\(Int(array[0])! + (Int(array[0])! == 12 ? 0 : 12))" + ":" + array[1] + ":" + array[2]
-      }
-    }
-
-    let workAtNotConvert = DHCalendarData.formatStringTypeYMDLineWithDate(date) + "T" + strTime
-
-    let workAt = workAtNotConvert + "+0000"
-
-    return workAt
-  }
-
-  class func convertLocalTimeToGMTTime(time: Time, date: NSDate) -> String {
-    var strTime = ""
-    if time.nameTime.containsString("AM") {
-      strTime = time.nameTime.stringByReplacingOccurrencesOfString(" AM", withString: ":00")
-    } else {
-      strTime = time.nameTime.stringByReplacingOccurrencesOfString(" PM", withString: ":00")
-
-      let array = strTime.componentsSeparatedByString(":")
-
-      if array.count == 3 {
-        strTime = "\(Int(array[0])! + (Int(array[0])! == 12 ? 0 : 12))" + ":" + array[1] + ":" + array[2]
-      }
-    }
-
-    let dateformater = NSDateFormatter()
-    dateformater.dateFormat = "xxxx"
-    let strTimeZone = dateformater.stringFromDate(date)
-
-    dateformater.dateFormat = "yyyy-MM-dd"
-
-    let strTimeLocal = dateformater.stringFromDate(date) + "T" + strTime + "\(strTimeZone)"
-
-    dateformater.timeZone = NSTimeZone(name: "UTC")
-    dateformater.dateFormat = "yyyy-MM-dd'T'HH:mm:ssxxxx"
-
-    let dateTimeGMT = dateformater.dateFromString(strTimeLocal)
-
-    return dateformater.stringFromDate(dateTimeGMT!)
   }
 
   class func daySuffix(date: NSDate) -> String {
@@ -887,10 +773,6 @@ class Common: NSObject {
       return nil
     }
     //return NSJSONSerialization.JSONObjectWithData(data, options: .MutableContainers)
-  }
-
-  class func showToastWithMessage(text: String) {
-    JLToast.makeText(text).show()
   }
 
   class func convertTypeDateToMicroSecond(date: NSDate) -> String {
@@ -929,39 +811,6 @@ class Common: NSObject {
     } catch {
       return nil
     }
-  }
-
-  class func formatDateMatch(dateMatch: String) -> String {
-
-    if dateMatch == "" {
-      return ""
-    } else {
-      let dateformatter = Common.getDateFormatWithTimeZone()
-
-      guard let date = dateformatter.dateFromString(dateMatch) else {
-        return dateMatch
-      }
-
-      let arrDMY = dateformatter.stringFromDate(date).componentsSeparatedByString("-")
-
-      if arrDMY.count >= 3 {
-        let arrDay = arrDMY[2].componentsSeparatedByString("T")
-        let strDate = arrDMY[1] + "/" + arrDay[0] + "/" + arrDMY[0]
-        return strDate
-      }
-
-      return dateMatch
-
-    }
-
-  }
-
-  class func getDateFormatWithTimeZone() -> NSDateFormatter {
-    let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.SSSSSSZ"
-    dateFormatter.timeZone = DHCalendarData.getCalendarCurrent().timeZone
-    dateFormatter.locale = DHCalendarData.getCalendarCurrent().locale
-    return dateFormatter
   }
 
   class func checkDateInPast(strDate: String) -> Bool {
@@ -1005,43 +854,6 @@ class Common: NSObject {
     return image
   }
 
-  class func getAttributeTextSignInAndSignUp(stringFirst: String, stringSecond: String) -> NSMutableAttributedString {
-    let attrFirst = NSMutableAttributedString(string: stringFirst)
-    attrFirst.addAttribute(NSFontAttributeName, value: getProximaNovaRegularWith(16), range: NSRange(location: 0, length: attrFirst.length))
-    attrFirst.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 119/255, green: 119/255, blue: 119/255, alpha: 1), range: NSRange(location: 0, length: attrFirst.length))
-
-    let attrSecond = NSMutableAttributedString(string: stringSecond)
-    attrSecond.addAttribute(NSFontAttributeName, value: getProximaNovaRegularWith(16), range: NSRange(location: 0, length: attrSecond.length))
-    attrSecond.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 171/255, green: 101/255, blue: 229/255, alpha: 1), range: NSRange(location: 0, length: attrSecond.length))
-
-    attrFirst.appendAttributedString(attrSecond)
-
-    return attrFirst
-  }
-
-  class func getAttributeTextTermAndPrivacy(stringFirst: String, stringSecond: String, stringThird: String, stringFourth: String) -> NSMutableAttributedString {
-    let attrFirst = NSMutableAttributedString(string: stringFirst)
-    attrFirst.addAttribute(NSFontAttributeName, value: getProximaNovaRegularWith(16), range: NSRange(location: 0, length: attrFirst.length))
-    attrFirst.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 119/255, green: 119/255, blue: 119/255, alpha: 1), range: NSRange(location: 0, length: attrFirst.length))
-
-    let attrSecond = NSMutableAttributedString(string: stringSecond)
-    attrSecond.addAttribute(NSFontAttributeName, value: getProximaNovaRegularWith(16), range: NSRange(location: 0, length: attrSecond.length))
-    attrSecond.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 171/255, green: 101/255, blue: 229/255, alpha: 1), range: NSRange(location: 0, length: attrSecond.length))
-    attrFirst.appendAttributedString(attrSecond)
-
-    let attrThird = NSMutableAttributedString(string: stringThird)
-    attrThird.addAttribute(NSFontAttributeName, value: getProximaNovaRegularWith(16), range: NSRange(location: 0, length: attrThird.length))
-    attrThird.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 119/255, green: 119/255, blue: 119/255, alpha: 1), range: NSRange(location: 0, length: attrThird.length))
-    attrFirst.appendAttributedString(attrThird)
-
-    let attrFourth = NSMutableAttributedString(string: stringFourth)
-    attrFourth.addAttribute(NSFontAttributeName, value: getProximaNovaRegularWith(16), range: NSRange(location: 0, length: attrFourth.length))
-    attrFourth.addAttribute(NSForegroundColorAttributeName, value: UIColor(red: 171/255, green: 101/255, blue: 229/255, alpha: 1), range: NSRange(location: 0, length: attrFourth.length))
-    attrFirst.appendAttributedString(attrFourth)
-
-    return attrFirst
-  }
-
   // Check available network connection
   class func isConnectedToNetwork() -> Bool {
     var zeroAddress = sockaddr_in()
@@ -1075,60 +887,4 @@ class Common: NSObject {
 
   }
 
-  class func setOpenHourForSalonDetail(day: String, hour: String) -> String {
-    return day + ": " + hour
-  }
-
-  class func convertRepeatTypeToString(re: RepeatObject, date: NSDate) -> String {
-
-    switch re.id {
-    case 0:
-      return "None"
-    case 1:
-      return "Weekly on " + Common.formatStringWithFormat("EE", withDate: date)
-    case 2:
-      return "Every 2 Weeks on " + Common.formatStringWithFormat("EE", withDate: date)
-    case 3:
-      return "Every 3 Weeks on " + Common.formatStringWithFormat("EE", withDate: date)
-    case 4:
-      return "Every 4 Weeks on " + Common.formatStringWithFormat("EE", withDate: date)
-    default:
-      break
-    }
-
-    return ""
-  }
-
-  class func checkUserName(userName: String) -> (String, String) {
-    let arrUserName = userName.componentsSeparatedByString(" ")
-    let firstName = arrUserName[0]
-    var lastName = ""
-    for i in 1..<arrUserName.count {
-      if i == 2 {
-        lastName += " \(arrUserName[i])"
-      } else {
-        lastName += arrUserName[i]
-      }
-    }
-    return (firstName, lastName)
-  }
-
-  class func requiredLoginToContinue(onVC: UIViewController) {
-    let alertController = UIAlertController(title: APP_NAME, message: MessRequiredLoginToContinue, preferredStyle: .Alert)
-
-    let okAction = UIAlertAction(title: "OK", style: UIAlertActionStyle.Default) {
-      UIAlertAction in
-      let vc = SignInVC()
-      onVC.navigationController?.pushViewController(vc, animated: true)
-    }
-    let cancelAction = UIAlertAction(title: "Cancel", style: UIAlertActionStyle.Cancel) {
-      UIAlertAction in
-
-    }
-
-    alertController.addAction(okAction)
-    alertController.addAction(cancelAction)
-
-    onVC.presentViewController(alertController, animated: true, completion: nil)
-  }
 }

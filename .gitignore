@@ -62,3 +62,5 @@ Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests-umbrella
 Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.debug.xcconfig
 Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.modulemap
 Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig
+Pods
+MyReminder.xcworkspace/xcuserdata/admin.xcuserdatad/xcdebugger
