@@ -32,6 +32,23 @@
 		848039581DCB882100935D3E /* DHIndicator.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039551DCB882000935D3E /* DHIndicator.swift */; };
 		8480395B1DCB94CB00935D3E /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039591DCB94CB00935D3E /* SignInVC.swift */; };
 		8480395C1DCB94CB00935D3E /* SignInVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480395A1DCB94CB00935D3E /* SignInVC.xib */; };
+		848039811DCD8EAD00935D3E /* CustomKolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039711DCD8EAD00935D3E /* CustomKolodaView.swift */; };
+		848039821DCD8EAD00935D3E /* CustomSwipeCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039721DCD8EAD00935D3E /* CustomSwipeCardView.swift */; };
+		848039831DCD8EAD00935D3E /* CustomSwipeCardView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039731DCD8EAD00935D3E /* CustomSwipeCardView.xib */; };
+		848039841DCD8EAD00935D3E /* ExampleOverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039741DCD8EAD00935D3E /* ExampleOverlayView.swift */; };
+		848039851DCD8EAD00935D3E /* DraggableCardView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039771DCD8EAD00935D3E /* DraggableCardView.swift */; };
+		848039861DCD8EAD00935D3E /* KolodaView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039781DCD8EAD00935D3E /* KolodaView.swift */; };
+		848039871DCD8EAD00935D3E /* OverlayView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480397A1DCD8EAD00935D3E /* OverlayView.swift */; };
+		848039881DCD8EAD00935D3E /* OverlayView.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480397B1DCD8EAD00935D3E /* OverlayView.xib */; };
+		848039891DCD8EAD00935D3E /* SwipeCardPersonalView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480397C1DCD8EAD00935D3E /* SwipeCardPersonalView.swift */; };
+		8480398C1DCD8EAD00935D3E /* MainScreenVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480397F1DCD8EAD00935D3E /* MainScreenVC.swift */; };
+		8480398D1DCD8EAD00935D3E /* MainScreenVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039801DCD8EAD00935D3E /* MainScreenVC.xib */; };
+		848039911DCD98EF00935D3E /* DetailsNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480398F1DCD98EF00935D3E /* DetailsNoteVC.swift */; };
+		848039921DCD98EF00935D3E /* DetailsNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039901DCD98EF00935D3E /* DetailsNoteVC.xib */; };
+		848039971DCDA70B00935D3E /* AddNoteVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 848039951DCDA70B00935D3E /* AddNoteVC.swift */; };
+		848039981DCDA70B00935D3E /* AddNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039961DCDA70B00935D3E /* AddNoteVC.xib */; };
+		8480399C1DCDB92000935D3E /* ListNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480399A1DCDB92000935D3E /* ListNotesVC.swift */; };
+		8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480399B1DCDB92000935D3E /* ListNotesVC.xib */; };
 		DA7EF86ECE90F514CF5F6F02 /* Pods_MyReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -86,6 +103,23 @@
 		848039551DCB882000935D3E /* DHIndicator.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DHIndicator.swift; sourceTree = "<group>"; };
 		848039591DCB94CB00935D3E /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		8480395A1DCB94CB00935D3E /* SignInVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SignInVC.xib; sourceTree = "<group>"; };
+		848039711DCD8EAD00935D3E /* CustomKolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomKolodaView.swift; sourceTree = "<group>"; };
+		848039721DCD8EAD00935D3E /* CustomSwipeCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomSwipeCardView.swift; sourceTree = "<group>"; };
+		848039731DCD8EAD00935D3E /* CustomSwipeCardView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CustomSwipeCardView.xib; sourceTree = "<group>"; };
+		848039741DCD8EAD00935D3E /* ExampleOverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ExampleOverlayView.swift; sourceTree = "<group>"; };
+		848039771DCD8EAD00935D3E /* DraggableCardView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DraggableCardView.swift; sourceTree = "<group>"; };
+		848039781DCD8EAD00935D3E /* KolodaView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = KolodaView.swift; sourceTree = "<group>"; };
+		8480397A1DCD8EAD00935D3E /* OverlayView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = OverlayView.swift; sourceTree = "<group>"; };
+		8480397B1DCD8EAD00935D3E /* OverlayView.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = OverlayView.xib; sourceTree = "<group>"; };
+		8480397C1DCD8EAD00935D3E /* SwipeCardPersonalView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeCardPersonalView.swift; sourceTree = "<group>"; };
+		8480397F1DCD8EAD00935D3E /* MainScreenVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MainScreenVC.swift; sourceTree = "<group>"; };
+		848039801DCD8EAD00935D3E /* MainScreenVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = MainScreenVC.xib; sourceTree = "<group>"; };
+		8480398F1DCD98EF00935D3E /* DetailsNoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DetailsNoteVC.swift; sourceTree = "<group>"; };
+		848039901DCD98EF00935D3E /* DetailsNoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = DetailsNoteVC.xib; sourceTree = "<group>"; };
+		848039951DCDA70B00935D3E /* AddNoteVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AddNoteVC.swift; sourceTree = "<group>"; };
+		848039961DCDA70B00935D3E /* AddNoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteVC.xib; sourceTree = "<group>"; };
+		8480399A1DCDB92000935D3E /* ListNotesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesVC.swift; sourceTree = "<group>"; };
+		8480399B1DCDB92000935D3E /* ListNotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListNotesVC.xib; sourceTree = "<group>"; };
 		8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -290,6 +324,10 @@
 		848039181DC88EA000935D3E /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				848039991DCDB90F00935D3E /* ListNotesVC */,
+				848039941DCDA6E900935D3E /* AddNoteVC */,
+				8480398E1DCD98DD00935D3E /* DetailsNoteVC */,
+				8480396F1DCD8EAD00935D3E /* MainScreenVC */,
 				848039511DCB6FF700935D3E /* SignInVC */,
 				848039301DCA369A00935D3E /* SignUpVC */,
 			);
@@ -379,6 +417,83 @@
 				848039551DCB882000935D3E /* DHIndicator.swift */,
 			);
 			path = DHIndicator;
+			sourceTree = "<group>";
+		};
+		8480396F1DCD8EAD00935D3E /* MainScreenVC */ = {
+			isa = PBXGroup;
+			children = (
+				848039701DCD8EAD00935D3E /* CustomSwipeCard */,
+				8480397F1DCD8EAD00935D3E /* MainScreenVC.swift */,
+				848039801DCD8EAD00935D3E /* MainScreenVC.xib */,
+			);
+			path = MainScreenVC;
+			sourceTree = "<group>";
+		};
+		848039701DCD8EAD00935D3E /* CustomSwipeCard */ = {
+			isa = PBXGroup;
+			children = (
+				848039711DCD8EAD00935D3E /* CustomKolodaView.swift */,
+				848039721DCD8EAD00935D3E /* CustomSwipeCardView.swift */,
+				848039731DCD8EAD00935D3E /* CustomSwipeCardView.xib */,
+				848039741DCD8EAD00935D3E /* ExampleOverlayView.swift */,
+				848039751DCD8EAD00935D3E /* KolodaView */,
+				8480397B1DCD8EAD00935D3E /* OverlayView.xib */,
+				8480397C1DCD8EAD00935D3E /* SwipeCardPersonalView.swift */,
+			);
+			path = CustomSwipeCard;
+			sourceTree = "<group>";
+		};
+		848039751DCD8EAD00935D3E /* KolodaView */ = {
+			isa = PBXGroup;
+			children = (
+				848039761DCD8EAD00935D3E /* DraggableCardView */,
+				848039781DCD8EAD00935D3E /* KolodaView.swift */,
+				848039791DCD8EAD00935D3E /* OverlayView */,
+			);
+			path = KolodaView;
+			sourceTree = "<group>";
+		};
+		848039761DCD8EAD00935D3E /* DraggableCardView */ = {
+			isa = PBXGroup;
+			children = (
+				848039771DCD8EAD00935D3E /* DraggableCardView.swift */,
+			);
+			path = DraggableCardView;
+			sourceTree = "<group>";
+		};
+		848039791DCD8EAD00935D3E /* OverlayView */ = {
+			isa = PBXGroup;
+			children = (
+				8480397A1DCD8EAD00935D3E /* OverlayView.swift */,
+			);
+			path = OverlayView;
+			sourceTree = "<group>";
+		};
+		8480398E1DCD98DD00935D3E /* DetailsNoteVC */ = {
+			isa = PBXGroup;
+			children = (
+				8480398F1DCD98EF00935D3E /* DetailsNoteVC.swift */,
+				848039901DCD98EF00935D3E /* DetailsNoteVC.xib */,
+			);
+			path = DetailsNoteVC;
+			sourceTree = "<group>";
+		};
+		848039941DCDA6E900935D3E /* AddNoteVC */ = {
+			isa = PBXGroup;
+			children = (
+				848039951DCDA70B00935D3E /* AddNoteVC.swift */,
+				848039961DCDA70B00935D3E /* AddNoteVC.xib */,
+			);
+			path = AddNoteVC;
+			sourceTree = "<group>";
+		};
+		848039991DCDB90F00935D3E /* ListNotesVC */ = {
+			isa = PBXGroup;
+			children = (
+				8480399A1DCDB92000935D3E /* ListNotesVC.swift */,
+				8480399B1DCDB92000935D3E /* ListNotesVC.xib */,
+			);
+			path = ListNotesVC;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -493,12 +608,18 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				848039831DCD8EAD00935D3E /* CustomSwipeCardView.xib in Resources */,
+				848039881DCD8EAD00935D3E /* OverlayView.xib in Resources */,
 				848039341DCA36BA00935D3E /* SignUpVC.xib in Resources */,
 				848039571DCB882100935D3E /* dh_loading@2x.png in Resources */,
 				848038E21DC8874400935D3E /* LaunchScreen.storyboard in Resources */,
+				8480398D1DCD8EAD00935D3E /* MainScreenVC.xib in Resources */,
 				848039061DC88A3E00935D3E /* GoogleService-Info.plist in Resources */,
+				848039921DCD98EF00935D3E /* DetailsNoteVC.xib in Resources */,
 				848038DF1DC8874400935D3E /* Assets.xcassets in Resources */,
+				8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */,
 				848039561DCB882000935D3E /* dh_loading.png in Resources */,
+				848039981DCDA70B00935D3E /* AddNoteVC.xib in Resources */,
 				8480395C1DCB94CB00935D3E /* SignInVC.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -647,17 +768,28 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				8480399C1DCDB92000935D3E /* ListNotesVC.swift in Sources */,
+				848039861DCD8EAD00935D3E /* KolodaView.swift in Sources */,
+				848039841DCD8EAD00935D3E /* ExampleOverlayView.swift in Sources */,
 				848039291DC88EA000935D3E /* GGNavigationController.swift in Sources */,
+				8480398C1DCD8EAD00935D3E /* MainScreenVC.swift in Sources */,
 				848039241DC88EA000935D3E /* Common.swift in Sources */,
 				848039281DC88EA000935D3E /* MyReminder.xcdatamodeld in Sources */,
+				848039811DCD8EAD00935D3E /* CustomKolodaView.swift in Sources */,
 				848039251DC88EA000935D3E /* Define.swift in Sources */,
 				8480395B1DCB94CB00935D3E /* SignInVC.swift in Sources */,
 				848039331DCA36BA00935D3E /* SignUpVC.swift in Sources */,
+				848039871DCD8EAD00935D3E /* OverlayView.swift in Sources */,
 				8480392A1DC88EA000935D3E /* GGParentVC.swift in Sources */,
+				848039911DCD98EF00935D3E /* DetailsNoteVC.swift in Sources */,
 				8480392D1DC97E7D00935D3E /* Note.swift in Sources */,
+				848039851DCD8EAD00935D3E /* DraggableCardView.swift in Sources */,
 				8480392B1DC88EA000935D3E /* GGTabbarParentVC.swift in Sources */,
 				848039581DCB882100935D3E /* DHIndicator.swift in Sources */,
 				848039271DC88EA000935D3E /* Message.swift in Sources */,
+				848039971DCDA70B00935D3E /* AddNoteVC.swift in Sources */,
+				848039821DCD8EAD00935D3E /* CustomSwipeCardView.swift in Sources */,
+				848039891DCD8EAD00935D3E /* SwipeCardPersonalView.swift in Sources */,
 				848039231DC88EA000935D3E /* AppDelegate.swift in Sources */,
 				848039261DC88EA000935D3E /* Helpers.swift in Sources */,
 				8480392F1DC97E9F00935D3E /* User.swift in Sources */,

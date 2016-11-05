@@ -16,7 +16,44 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="img_backgound" translatesAutoresizingMaskIntoConstraints="NO" id="utu-tk-Fqg">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                            </imageView>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_applaunch_photo" translatesAutoresizingMaskIntoConstraints="NO" id="Ooy-iV-9nG">
+                                <rect key="frame" x="251" y="236" width="98" height="127"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="98" id="p5n-uX-fQ8"/>
+                                    <constraint firstAttribute="height" constant="127" id="thV-9W-HdA"/>
+                                </constraints>
+                            </imageView>
+                            <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="LOADING" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0cT-gu-IEU">
+                                <rect key="frame" x="263.5" y="549" width="73" height="21"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ic_loading" translatesAutoresizingMaskIntoConstraints="NO" id="POG-7s-oO2">
+                                <rect key="frame" x="288" y="515" width="24" height="24"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="24" id="R0z-TD-VvI"/>
+                                    <constraint firstAttribute="width" constant="24" id="uhC-vf-NpR"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="utu-tk-Fqg" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="51R-2V-6V3"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="0cT-gu-IEU" secondAttribute="bottom" constant="30" id="7F0-JN-D2n"/>
+                            <constraint firstItem="0cT-gu-IEU" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="DA4-EC-1Em"/>
+                            <constraint firstItem="POG-7s-oO2" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="Q5a-mb-l02"/>
+                            <constraint firstAttribute="trailing" secondItem="utu-tk-Fqg" secondAttribute="trailing" id="SkN-vc-x7D"/>
+                            <constraint firstItem="Ooy-iV-9nG" firstAttribute="centerY" secondItem="Ze5-6b-2t3" secondAttribute="centerY" id="T0L-nY-Mpk"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="utu-tk-Fqg" secondAttribute="bottom" id="bWF-qQ-RcH"/>
+                            <constraint firstItem="utu-tk-Fqg" firstAttribute="top" secondItem="Llm-lL-Icb" secondAttribute="bottom" constant="-20" id="cX9-q9-l04"/>
+                            <constraint firstItem="Ooy-iV-9nG" firstAttribute="centerX" secondItem="Ze5-6b-2t3" secondAttribute="centerX" id="r6d-Pm-ZSh"/>
+                            <constraint firstItem="0cT-gu-IEU" firstAttribute="top" secondItem="POG-7s-oO2" secondAttribute="bottom" constant="10" id="zjI-9A-YTM"/>
+                        </constraints>
                     </view>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -24,4 +61,9 @@
             <point key="canvasLocation" x="53" y="375"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ic_applaunch_photo" width="94" height="117"/>
+        <image name="ic_loading" width="24" height="25"/>
+        <image name="img_backgound" width="375" height="667"/>
+    </resources>
 </document>

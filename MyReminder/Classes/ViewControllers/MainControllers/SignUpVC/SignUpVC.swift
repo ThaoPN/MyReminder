@@ -13,6 +13,8 @@ class SignUpVC: UIViewController {
 // MARK: - Outlets
   @IBOutlet weak var txfEmail: UITextField!
   @IBOutlet weak var txfPassword: UITextField!
+  @IBOutlet weak var consTopTitle: NSLayoutConstraint!
+  @IBOutlet weak var btnSignUp: UIButton!
 
 // MARK: - Variables
   private var ref: FIRDatabaseReference!
@@ -34,7 +36,7 @@ class SignUpVC: UIViewController {
   }
 
   deinit {
-    ref.child("Users").removeObserverWithHandle(_refHandle)
+    //ref.child("Users").removeObserverWithHandle(_refHandle)
   }
 
 // MARK: - Override methods
@@ -43,17 +45,60 @@ class SignUpVC: UIViewController {
 
     ref = FIRDatabase.database().reference()
 
-    DHIndicator.show()
-    _refHandle = ref.child("Users").queryOrderedByKey().observeEventType(.Value, withBlock: {[weak self] (snapshot) in
-      guard let strongSelf = self else { return }
+//    DHIndicator.show()
+//    _refHandle = ref.child("Users").queryOrderedByKey().observeEventType(.Value, withBlock: {[weak self] (snapshot) in
+//      guard let strongSelf = self else { return }
+//
+//      strongSelf.usersTmp.append(snapshot)
+//      print(strongSelf.usersTmp)
+//      DHIndicator.hide()
+//    })
 
-      strongSelf.usersTmp.append(snapshot)
-      print(strongSelf.usersTmp)
-      DHIndicator.hide()
-    })
+    txfEmail.layer.cornerRadius = 45/2
+    let leftViewEmail = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: txfEmail.frame.size.height))
+    txfEmail.leftView = leftViewEmail
+    txfEmail.leftViewMode = .Always
+
+    txfPassword.layer.cornerRadius = 45/2
+    let leftViewPassword = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: txfPassword.frame.size.height))
+    txfPassword.leftView = leftViewPassword
+    txfPassword.leftViewMode = .Always
+
+    btnSignUp.layer.borderWidth = 1
+    btnSignUp.layer.borderColor = UIColor.blackColor().CGColor
+    btnSignUp.layer.cornerRadius = 45/2
   }
-// MARK: - Public methods
 
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillShow(_:)), name: UIKeyboardWillShowNotification, object: nil)
+    NSNotificationCenter.defaultCenter().addObserver(self, selector: #selector(keyboardWillHide(_:)), name: UIKeyboardWillHideNotification, object: nil)
+  }
+
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+  }
+
+  override func viewDidDisappear(animated: Bool) {
+    super.viewDidDisappear(animated)
+    NSNotificationCenter.defaultCenter().removeObserver(self)
+  }
+
+  override func touchesBegan(touches: Set<UITouch>, withEvent event: UIEvent?) {
+    view.endEditing(true)
+  }
+
+// MARK: - Public methods
+  func keyboardWillShow(notification: NSNotification) {
+    consTopTitle.constant = 50
+
+  }
+
+  func keyboardWillHide(notification: NSNotification) {
+    print("Keyboard hide")
+    consTopTitle.constant = 162
+  }
 // MARK: - Private methods
   private func signUpWith(email: String, password: String) {
     let uuid = NSUUID().UUIDString
@@ -75,7 +120,7 @@ class SignUpVC: UIViewController {
 
     ref.child("Users").queryOrderedByChild(KeyUser.userEmail).queryEqualToValue(txfEmail.text!).observeSingleEventOfType(.Value, withBlock: {[weak self] (snapshot) in
       guard let strongSelf = self else { return }
-      
+
       if snapshot.childrenCount > 0 {
         Common.showAlertWithHUD("Your email is existed!")
       } else {
@@ -83,7 +128,7 @@ class SignUpVC: UIViewController {
       }
     })
   }
-  
+
   @IBAction func tapToClose(sender: AnyObject) {
     dismissViewControllerAnimated(true, completion: nil)
   }

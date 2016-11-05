@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="xxl-k2-sSw" customClass="CustomSwipeCardView" customModule="MyReminder" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="327" height="421"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="iN0-l3-epB">
+                    <rect key="frame" x="0.0" y="0.0" width="327" height="421"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 1" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xs9-ae-Gb2">
+                            <rect key="frame" x="20" y="20" width="249" height="19.5"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cbu-0B-hiQ">
+                            <rect key="frame" x="277" y="0.0" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="Ac2-00-hn9"/>
+                                <constraint firstAttribute="height" constant="50" id="WRj-iO-3I4"/>
+                            </constraints>
+                            <state key="normal" image="ic_share"/>
+                            <connections>
+                                <action selector="tapToShare:" destination="xxl-k2-sSw" eventType="touchUpInside" id="Ohn-hc-szp"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="14 Feb, 2016" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="EDe-sn-kli">
+                            <rect key="frame" x="20" y="47" width="83" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Share by Antonia Alex" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6Oc-mV-y7E">
+                            <rect key="frame" x="166" y="47" width="141" height="17"/>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="1" green="0.79607843137254897" blue="0.054901960784313725" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <view alpha="0.29999999999999999" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zVj-G7-kEW" userLabel="Line">
+                            <rect key="frame" x="20" y="84" width="287" height="1"/>
+                            <color key="backgroundColor" red="0.59215686274509804" green="0.59215686274509804" blue="0.59215686274509804" alpha="1" colorSpace="calibratedRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="1" id="p3p-D0-nen"/>
+                            </constraints>
+                        </view>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vxa-db-xAf">
+                            <rect key="frame" x="20" y="105" width="287" height="184"/>
+                            <string key="text">- There are many variations of passages of Lorem Ipsum available. 
+
+- But the majority have suffered alteration in some form.
+
+-  If you are going to use a passage of Lorem Ipsum.
+
+-  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks. </string>
+                            <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                            <color key="textColor" red="0.45882352939999999" green="0.45882352939999999" blue="0.45882352939999999" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                    <constraints>
+                        <constraint firstAttribute="trailing" secondItem="vxa-db-xAf" secondAttribute="trailing" constant="20" id="3wA-6i-sAa"/>
+                        <constraint firstItem="EDe-sn-kli" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="5ql-6h-m6e"/>
+                        <constraint firstItem="zVj-G7-kEW" firstAttribute="top" secondItem="6Oc-mV-y7E" secondAttribute="bottom" constant="20" id="8W8-fj-Ku2"/>
+                        <constraint firstAttribute="trailing" secondItem="cbu-0B-hiQ" secondAttribute="trailing" id="9YX-3P-seA"/>
+                        <constraint firstAttribute="trailing" secondItem="zVj-G7-kEW" secondAttribute="trailing" constant="20" id="FTb-fE-Meu"/>
+                        <constraint firstItem="vxa-db-xAf" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="b9I-jd-qCL"/>
+                        <constraint firstItem="xs9-ae-Gb2" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="fgC-zK-au3"/>
+                        <constraint firstItem="vxa-db-xAf" firstAttribute="top" secondItem="zVj-G7-kEW" secondAttribute="bottom" constant="20" id="hwe-Yv-Dwg"/>
+                        <constraint firstItem="EDe-sn-kli" firstAttribute="top" secondItem="xs9-ae-Gb2" secondAttribute="bottom" constant="7.5" id="iKT-AB-vgu"/>
+                        <constraint firstItem="xs9-ae-Gb2" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" constant="20" id="nWu-1G-C8E"/>
+                        <constraint firstItem="6Oc-mV-y7E" firstAttribute="centerY" secondItem="EDe-sn-kli" secondAttribute="centerY" id="oMb-uI-a5M"/>
+                        <constraint firstAttribute="trailing" secondItem="6Oc-mV-y7E" secondAttribute="trailing" constant="20" id="tRY-CX-AuD"/>
+                        <constraint firstItem="cbu-0B-hiQ" firstAttribute="leading" secondItem="xs9-ae-Gb2" secondAttribute="trailing" constant="8" id="xea-rW-ZFt"/>
+                        <constraint firstItem="cbu-0B-hiQ" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="xmy-S8-yu7"/>
+                        <constraint firstItem="zVj-G7-kEW" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" constant="20" id="xuV-FU-jVO"/>
+                        <constraint firstItem="6Oc-mV-y7E" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="EDe-sn-kli" secondAttribute="trailing" constant="8" id="yU2-3x-qH0"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="top" secondItem="xxl-k2-sSw" secondAttribute="top" id="T2d-Fl-sES"/>
+                <constraint firstItem="iN0-l3-epB" firstAttribute="leading" secondItem="xxl-k2-sSw" secondAttribute="leading" id="gKo-2H-z4P"/>
+                <constraint firstAttribute="trailing" secondItem="iN0-l3-epB" secondAttribute="trailing" id="ut5-0y-efh"/>
+                <constraint firstAttribute="bottom" secondItem="iN0-l3-epB" secondAttribute="bottom" id="z66-Th-Ttq"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnShare" destination="cbu-0B-hiQ" id="YC7-Aa-smc"/>
+                <outlet property="lblContent" destination="vxa-db-xAf" id="Qaj-UW-PCC"/>
+                <outlet property="lblDate" destination="EDe-sn-kli" id="dp6-Y1-cSs"/>
+                <outlet property="lblOwner" destination="6Oc-mV-y7E" id="5ag-qw-4Zc"/>
+                <outlet property="lblTitle" destination="xs9-ae-Gb2" id="7yO-zJ-wfd"/>
+                <outlet property="viewContent" destination="iN0-l3-epB" id="rVg-qm-0EZ"/>
+            </connections>
+            <point key="canvasLocation" x="234.5" y="206.5"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="ic_share" width="13" height="17"/>
+    </resources>
+</document>

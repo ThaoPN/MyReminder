@@ -14,7 +14,7 @@ import Firebase
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
   var window: UIWindow?
-
+  var currentUser: User?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
     // Override point for customization after application launch.
@@ -23,9 +23,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     window = UIWindow(frame: UIScreen.mainScreen().bounds)
     window?.backgroundColor = UIColor.whiteColor()
     window?.makeKeyAndVisible()
-    window?.rootViewController = SignInVC()
+
+    let navi = GGNavigationController(rootViewController: SignInVC())
+    navi.navigationBarHidden = true
+    window?.rootViewController = navi
 
     return true
+  }
+
+  class func shareInstance() -> AppDelegate {
+    let appDelegate = UIApplication.sharedApplication().delegate as! AppDelegate
+    return appDelegate
   }
 
   func applicationWillResignActive(application: UIApplication) {

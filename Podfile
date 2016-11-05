@@ -8,6 +8,7 @@ target 'MyReminder' do
   pod 'Firebase/Database'
   pod 'ObjectMapper', '~> 1.3'
   pod 'PKHUD', '~> 3.1.0'
+  pod 'pop', '~> 1.0.9'
 
   # Pods for MyReminder
 
