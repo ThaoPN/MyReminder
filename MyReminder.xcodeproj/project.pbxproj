@@ -49,6 +49,8 @@
 		848039981DCDA70B00935D3E /* AddNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039961DCDA70B00935D3E /* AddNoteVC.xib */; };
 		8480399C1DCDB92000935D3E /* ListNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480399A1DCDB92000935D3E /* ListNotesVC.swift */; };
 		8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480399B1DCDB92000935D3E /* ListNotesVC.xib */; };
+		84B66CCD1DCDDFFA00DB186F /* TutorialVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84B66CCB1DCDDFFA00DB186F /* TutorialVC.swift */; };
+		84B66CCE1DCDDFFA00DB186F /* TutorialVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84B66CCC1DCDDFFA00DB186F /* TutorialVC.xib */; };
 		84CE9F671DCDBF6800B0D134 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9F651DCDBF6800B0D134 /* NoteCell.swift */; };
 		84CE9F681DCDBF6800B0D134 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE9F661DCDBF6800B0D134 /* NoteCell.xib */; };
 		84CE9F6C1DCDC4F100B0D134 /* ShareForVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9F6A1DCDC4F100B0D134 /* ShareForVC.swift */; };
@@ -124,6 +126,8 @@
 		848039961DCDA70B00935D3E /* AddNoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteVC.xib; sourceTree = "<group>"; };
 		8480399A1DCDB92000935D3E /* ListNotesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesVC.swift; sourceTree = "<group>"; };
 		8480399B1DCDB92000935D3E /* ListNotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListNotesVC.xib; sourceTree = "<group>"; };
+		84B66CCB1DCDDFFA00DB186F /* TutorialVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TutorialVC.swift; sourceTree = "<group>"; };
+		84B66CCC1DCDDFFA00DB186F /* TutorialVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = TutorialVC.xib; sourceTree = "<group>"; };
 		84CE9F651DCDBF6800B0D134 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		84CE9F661DCDBF6800B0D134 /* NoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
 		84CE9F6A1DCDC4F100B0D134 /* ShareForVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareForVC.swift; sourceTree = "<group>"; };
@@ -332,6 +336,7 @@
 		848039181DC88EA000935D3E /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84B66CCA1DCDDFEB00DB186F /* TutorialVC */,
 				84CE9F691DCDC4D800B0D134 /* ShareForVC */,
 				848039991DCDB90F00935D3E /* ListNotesVC */,
 				848039941DCDA6E900935D3E /* AddNoteVC */,
@@ -507,6 +512,15 @@
 			path = ListNotesVC;
 			sourceTree = "<group>";
 		};
+		84B66CCA1DCDDFEB00DB186F /* TutorialVC */ = {
+			isa = PBXGroup;
+			children = (
+				84B66CCB1DCDDFFA00DB186F /* TutorialVC.swift */,
+				84B66CCC1DCDDFFA00DB186F /* TutorialVC.xib */,
+			);
+			path = TutorialVC;
+			sourceTree = "<group>";
+		};
 		84CE9F691DCDC4D800B0D134 /* ShareForVC */ = {
 			isa = PBXGroup;
 			children = (
@@ -640,6 +654,7 @@
 				848039921DCD98EF00935D3E /* DetailsNoteVC.xib in Resources */,
 				848038DF1DC8874400935D3E /* Assets.xcassets in Resources */,
 				8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */,
+				84B66CCE1DCDDFFA00DB186F /* TutorialVC.xib in Resources */,
 				848039561DCB882000935D3E /* dh_loading.png in Resources */,
 				848039981DCDA70B00935D3E /* AddNoteVC.xib in Resources */,
 				8480395C1DCB94CB00935D3E /* SignInVC.xib in Resources */,
@@ -790,6 +805,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				84B66CCD1DCDDFFA00DB186F /* TutorialVC.swift in Sources */,
 				8480399C1DCDB92000935D3E /* ListNotesVC.swift in Sources */,
 				84CE9F671DCDBF6800B0D134 /* NoteCell.swift in Sources */,
 				848039861DCD8EAD00935D3E /* KolodaView.swift in Sources */,

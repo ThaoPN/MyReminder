@@ -582,17 +582,19 @@ class Common: NSObject {
     let blurEffect = UIBlurEffect(style: effectStyle)
     let blurView = UIVisualEffectView(effect: blurEffect)
     if let color = bgColor {
-    blurView.backgroundColor = color
+      blurView.backgroundColor = color
     }
-    blurView.translatesAutoresizingMaskIntoConstraints = false
+    blurView.frame = view.bounds
+//    blurView.translatesAutoresizingMaskIntoConstraints = false
     view.insertSubview(blurView, atIndex: 0)
+    
 
-    view.addConstraint(NSLayoutConstraint(item: blurView,
-      attribute: .Height, relatedBy: .Equal, toItem: view,
-      attribute: .Height, multiplier: 1, constant: 0))
-    view.addConstraint(NSLayoutConstraint(item: blurView,
-      attribute: .Width, relatedBy: .Equal, toItem: view,
-      attribute: .Width, multiplier: 2, constant: 0))
+//    view.addConstraint(NSLayoutConstraint(item: blurView,
+//      attribute: .Height, relatedBy: .Equal, toItem: view,
+//      attribute: .Height, multiplier: 1, constant: 0))
+//    view.addConstraint(NSLayoutConstraint(item: blurView,
+//      attribute: .Width, relatedBy: .Equal, toItem: view,
+//      attribute: .Width, multiplier: 2, constant: 0))
 
   }
 

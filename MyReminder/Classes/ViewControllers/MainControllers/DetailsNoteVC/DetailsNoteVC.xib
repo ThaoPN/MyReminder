@@ -37,7 +37,7 @@
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Word 1" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIU-iX-HqN">
-                            <rect key="frame" x="158.5" y="32" width="58" height="21"/>
+                            <rect key="frame" x="158" y="32" width="58" height="21"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
@@ -90,7 +90,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JED-dW-kCX">
                     <rect key="frame" x="20" y="84" width="335" height="503"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">NEW WORDS 1
+                    <mutableString key="text">NEW WORDS 1
 
 - There are many variations of passages of Lorem Ipsum available. 
 
@@ -100,7 +100,17 @@
 
 -  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks.
 
--   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour </string>
+-   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour   NEW WORDS 1
+
+- There are many variations of passages of Lorem Ipsum available. 
+
+- But the majority have suffered alteration in some form.
+
+- If you are going to use a passage of Lorem Ipsum.
+
+-  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks.
+
+-   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour </mutableString>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
@@ -115,7 +125,7 @@
                         <action selector="tapToSetPriority:" destination="-1" eventType="touchUpInside" id="DFx-vJ-f5C"/>
                     </connections>
                 </button>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcd-TJ-S6T">
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcd-TJ-S6T">
                     <rect key="frame" x="0.0" y="539" width="375" height="128"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEp-9v-1dD">
@@ -128,7 +138,7 @@
                             <state key="normal" title="Hard">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="selected" backgroundImage="img_background_low">
+                            <state key="selected" backgroundImage="img_background_hard">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>
@@ -162,7 +172,7 @@
                             <state key="normal" title="Easy">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
-                            <state key="selected" backgroundImage="img_background_hard">
+                            <state key="selected" backgroundImage="img_background_low">
                                 <color key="titleColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
                             <connections>

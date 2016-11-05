@@ -79,6 +79,32 @@ class ListNotesVC: UIViewController {
     btnMyNotes.selected = false
     btnSharedNotes.selected = true
   }
+
+  @IBAction func tapToSetting(sender: AnyObject) {
+    let alertView: UIAlertController = UIAlertController(title: "", message: "Do you want to log out?", preferredStyle:UIAlertControllerStyle.ActionSheet)
+    let actionLogout = UIAlertAction(title: "Log Out", style: .Default) { (action) in
+      let navi = GGNavigationController(rootViewController: SignInVC())
+      UIView.transitionWithView(AppDelegate.shareInstance().window!,
+                                duration:0.5,
+                                options: UIViewAnimationOptions.TransitionCurlDown,
+                                animations: {
+                                  let oldState: Bool = UIView.areAnimationsEnabled()
+                                  UIView.setAnimationsEnabled(false)
+                                  AppDelegate.shareInstance().window?.rootViewController = navi
+                                  
+                                  UIView.setAnimationsEnabled(oldState)
+        },
+                                completion: {
+                                  finished in
+                                  
+      })
+    }
+    let actionCancel = UIAlertAction(title: "Cancel", style: .Cancel) { (action) in
+    }
+    alertView.addAction(actionCancel)
+    alertView.addAction(actionLogout)
+    presentViewController(alertView, animated: true, completion: nil)
+  }
 }
 
 extension ListNotesVC: UITableViewDataSource {

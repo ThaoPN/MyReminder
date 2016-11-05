@@ -47,6 +47,17 @@ class MainScreenVC: UIViewController {
     viewInfoUser.dataSource = self
     viewInfoUser.delegate = self
   }
+  
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+    if let _ = NSUserDefaults.standardUserDefaults().objectForKey(kTutorialMainScreen) {
+      
+    } else {
+      NSUserDefaults.standardUserDefaults().setValue("1", forKey: kTutorialMainScreen)
+      let vc = TutorialVC(isAddNote: false)
+      presentViewController(vc, animated: true, completion: nil)
+    }
+  }
 
   // MARK: - Private method
   private func presentStackViewController(parentVC: UIViewController, presentVC: UIViewController, animation: Bool) {
@@ -72,12 +83,6 @@ class MainScreenVC: UIViewController {
     //loadUsers()
   }
 
-  private func loadUsers() {
-    //showLoadingView()
-    //loadingView.requestApi()
-
-  }
-
   // MARK: - Actions
   @IBAction func tapToAddNote(sender: AnyObject) {
     let vc = AddNoteVC()
@@ -85,8 +90,9 @@ class MainScreenVC: UIViewController {
   }
 
   @IBAction func tapToRedo(sender: AnyObject) {
-
+    viewInfoUser.revertAction()
   }
+  
   @IBAction func tapToListNotes(sender: AnyObject) {
     let navi = GGNavigationController(rootViewController: ListNotesVC())
     UIView.transitionWithView(AppDelegate.shareInstance().window!,
@@ -133,6 +139,7 @@ extension MainScreenVC: KolodaViewDelegate {
   func koloda(kolodaDidRunOutOfCards koloda: KolodaView) {
     print("Out of card")
 //    loadUsers()
+    viewInfoUser.resetCurrentCardNumber()
   }
 
   func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
@@ -146,7 +153,7 @@ extension MainScreenVC: KolodaViewDelegate {
 extension MainScreenVC: KolodaViewDataSource {
 
   func koloda(kolodaNumberOfCards koloda: KolodaView) -> UInt {
-    return UInt(10)
+    return UInt(3)
   }
 
   func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {

@@ -22,27 +22,27 @@
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59D-0M-LFR">
                     <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
                     <subviews>
-                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-Gi-6OG">
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-Gi-6OG">
                             <rect key="frame" x="0.0" y="18" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="Ago-iP-t9l"/>
                                 <constraint firstAttribute="width" constant="50" id="ln1-Wr-L8D"/>
                             </constraints>
-                            <state key="normal" image="ic_back"/>
+                            <state key="normal" image="ic_setting"/>
                             <connections>
-                                <action selector="tapToBack:" destination="-1" eventType="touchUpInside" id="hMv-eE-C4E"/>
+                                <action selector="tapToSetting:" destination="-1" eventType="touchUpInside" id="YQY-WH-ILO"/>
                             </connections>
                         </button>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Db-YA-Akv">
-                            <rect key="frame" x="162.5" y="32" width="50.5" height="21"/>
+                            <rect key="frame" x="162" y="32" width="50.5" height="21"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXy-fI-HKe">
-                            <rect key="frame" x="325" y="18" width="50" height="50"/>
+                            <rect key="frame" x="332" y="18" width="40" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="50" id="EKY-eI-vvI"/>
+                                <constraint firstAttribute="width" constant="40" id="EKY-eI-vvI"/>
                                 <constraint firstAttribute="height" constant="50" id="lcx-UN-jBp"/>
                             </constraints>
                             <state key="normal" image="ic_cards"/>
@@ -55,10 +55,10 @@
                     <constraints>
                         <constraint firstItem="HJl-Gi-6OG" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="top" constant="18" id="5Nu-lw-PAS"/>
                         <constraint firstItem="3Db-YA-Akv" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="top" constant="32" id="6wn-sC-vp0"/>
-                        <constraint firstItem="fXy-fI-HKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Db-YA-Akv" secondAttribute="trailing" constant="8" id="Aez-MH-h6q"/>
                         <constraint firstAttribute="height" constant="64" id="GvT-06-oVN"/>
                         <constraint firstItem="3Db-YA-Akv" firstAttribute="centerX" secondItem="59D-0M-LFR" secondAttribute="centerX" id="WCo-jR-5el"/>
-                        <constraint firstAttribute="trailing" secondItem="fXy-fI-HKe" secondAttribute="trailing" id="epw-vi-e4l"/>
+                        <constraint firstItem="fXy-fI-HKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Db-YA-Akv" secondAttribute="trailing" constant="8" id="XcV-mH-nrx"/>
+                        <constraint firstAttribute="trailing" secondItem="fXy-fI-HKe" secondAttribute="trailing" constant="3" id="epw-vi-e4l"/>
                         <constraint firstItem="HJl-Gi-6OG" firstAttribute="leading" secondItem="59D-0M-LFR" secondAttribute="leading" id="gPH-TE-OEI"/>
                         <constraint firstItem="3Db-YA-Akv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HJl-Gi-6OG" secondAttribute="trailing" constant="8" id="xIs-sC-rTZ"/>
                         <constraint firstItem="fXy-fI-HKe" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="top" constant="18" id="zS6-Fl-7jT"/>
@@ -140,7 +140,7 @@
         </view>
     </objects>
     <resources>
-        <image name="ic_back" width="17" height="18"/>
         <image name="ic_cards" width="17" height="22"/>
+        <image name="ic_setting" width="22" height="22"/>
     </resources>
 </document>

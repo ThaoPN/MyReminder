@@ -49,7 +49,24 @@ class DetailsNoteVC: UIViewController {
     btnLow.layer.borderColor = UIColor(red: 203/255, green: 203/255, blue: 203/255, alpha: 1).CGColor
     btnLow.layer.borderWidth = 1
     btnLow.layer.masksToBounds = true
+
+    viewPriority.layer.shadowColor = UIColor(red: 105/255, green: 105/255, blue: 105/255, alpha: 0.3).CGColor
+    viewPriority.layer.shadowOffset = CGSize(width: 0, height: -2)
+    viewPriority.layer.shadowOpacity = 0.7
+    viewPriority.layer.shadowRadius = 2.0
   }
+
+  override func viewDidAppear(animated: Bool) {
+    super.viewDidAppear(animated)
+//    if let _ = NSUserDefaults.standardUserDefaults().objectForKey(kTutorialAddNote) {
+//
+//    } else {
+//      NSUserDefaults.standardUserDefaults().setValue("1", forKey: kTutorialAddNote)
+//      let vc = TutorialVC(isAddNote: true)
+//      presentViewController(vc, animated: true, completion: nil)
+//    }
+  }
+
   // MARK: - Public methods
 
   // MARK: - Private methods
@@ -60,7 +77,9 @@ class DetailsNoteVC: UIViewController {
   }
 
   @IBAction func tapToClosePriority(sender: AnyObject) {
-    viewPriority.hidden = true
+    UIView.animateWithDuration(0.3) {
+      self.viewPriority.alpha = 0
+    }
   }
   @IBAction func tapToSetHight(sender: AnyObject) {
     btnHight.selected = true
@@ -78,13 +97,13 @@ class DetailsNoteVC: UIViewController {
     btnLow.selected = true
   }
   @IBAction func tapToSetPriority(sender: AnyObject) {
-    viewPriority.hidden = false
+    UIView.animateWithDuration(0.3) {
+      self.viewPriority.alpha = 1
+    }
   }
 
   @IBAction func tapToShare(sender: AnyObject) {
     let vc = ShareForVC()
     navigationController?.pushViewController(vc, animated: true)
   }
-
-
 }

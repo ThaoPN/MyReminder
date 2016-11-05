@@ -36,50 +36,44 @@
                                 <action selector="tapToBack:" destination="-1" eventType="touchUpInside" id="cGw-92-atx"/>
                             </connections>
                         </button>
-                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIU-iX-HqN">
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIU-iX-HqN">
                             <rect key="frame" x="148" y="32" width="79" height="21"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
                             <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-o9-EA3">
-                            <rect key="frame" x="255" y="18" width="30" height="50"/>
+                            <rect key="frame" x="273" y="18" width="30" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="width" constant="30" id="I6x-Y6-Sb9"/>
                                 <constraint firstAttribute="height" constant="50" id="Jj9-PX-Jsw"/>
                             </constraints>
-                            <state key="normal" image="ic_search"/>
-                        </button>
-                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDB-kc-rRN">
-                            <rect key="frame" x="293" y="18" width="30" height="50"/>
-                            <constraints>
-                                <constraint firstAttribute="height" constant="50" id="625-a7-z78"/>
-                                <constraint firstAttribute="width" constant="30" id="GRy-Wx-sJA"/>
-                            </constraints>
                             <state key="normal" image="ic_share"/>
                             <connections>
-                                <action selector="tapToShare:" destination="-1" eventType="touchUpInside" id="PHZ-fl-2lS"/>
+                                <action selector="tapToShare:" destination="-1" eventType="touchUpInside" id="p07-2d-N5Q"/>
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU9-7j-OBp">
-                            <rect key="frame" x="331" y="18" width="30" height="50"/>
+                            <rect key="frame" x="311" y="18" width="50" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="jlf-Jf-VbM"/>
-                                <constraint firstAttribute="width" constant="30" id="pOi-cE-pWm"/>
+                                <constraint firstAttribute="width" constant="50" id="pOi-cE-pWm"/>
                             </constraints>
-                            <state key="normal" image="ic_profile"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                            <state key="normal" title="Done">
+                                <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                            </state>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="64" id="2fM-cS-lr2"/>
-                        <constraint firstItem="fDB-kc-rRN" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="18" id="4oT-xX-W0M"/>
+                        <constraint firstItem="AU9-7j-OBp" firstAttribute="leading" secondItem="IRb-o9-EA3" secondAttribute="trailing" constant="8" id="43s-l6-K3o"/>
                         <constraint firstItem="IRb-o9-EA3" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="hIU-iX-HqN" secondAttribute="trailing" constant="8" id="LX2-ce-DfK"/>
                         <constraint firstItem="hIU-iX-HqN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vW7-gJ-6y0" secondAttribute="trailing" constant="8" id="MeS-6K-Gsz"/>
+                        <constraint firstItem="hIU-iX-HqN" firstAttribute="centerX" secondItem="wX7-0v-Q3q" secondAttribute="centerX" id="OYV-9a-880"/>
                         <constraint firstItem="AU9-7j-OBp" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="18" id="YBy-hB-o0B"/>
                         <constraint firstAttribute="trailing" secondItem="AU9-7j-OBp" secondAttribute="trailing" constant="14" id="bHh-XG-DZZ"/>
-                        <constraint firstItem="AU9-7j-OBp" firstAttribute="leading" secondItem="fDB-kc-rRN" secondAttribute="trailing" constant="8" id="fi2-UE-uhe"/>
-                        <constraint firstItem="fDB-kc-rRN" firstAttribute="leading" secondItem="IRb-o9-EA3" secondAttribute="trailing" constant="8" id="ghs-bU-d44"/>
                         <constraint firstItem="IRb-o9-EA3" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="18" id="qm1-ZR-DXU"/>
                         <constraint firstItem="hIU-iX-HqN" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="32" id="vP3-P2-hur"/>
                         <constraint firstItem="vW7-gJ-6y0" firstAttribute="leading" secondItem="wX7-0v-Q3q" secondAttribute="leading" id="viK-Y7-Nng"/>
@@ -114,7 +108,7 @@
                         <action selector="tapToSetPriority:" destination="-1" eventType="touchUpInside" id="DFx-vJ-f5C"/>
                     </connections>
                 </button>
-                <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcd-TJ-S6T">
+                <view alpha="0.0" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zcd-TJ-S6T">
                     <rect key="frame" x="0.0" y="539" width="375" height="128"/>
                     <subviews>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JEp-9v-1dD">
@@ -216,8 +210,6 @@
     <resources>
         <image name="ic_back" width="17" height="18"/>
         <image name="ic_close" width="16" height="16"/>
-        <image name="ic_profile" width="17" height="20"/>
-        <image name="ic_search" width="16" height="16"/>
         <image name="ic_setpriority" width="60" height="60"/>
         <image name="ic_share" width="13" height="17"/>
         <image name="img_background_hard" width="110" height="45"/>
