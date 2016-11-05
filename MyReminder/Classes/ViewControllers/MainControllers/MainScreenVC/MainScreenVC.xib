@@ -60,7 +60,7 @@
                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9vG-T5-pEt">
                                     <rect key="frame" x="162" y="22" width="50.5" height="21"/>
                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                                    <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                    <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                     <nil key="highlightedColor"/>
                                 </label>
                                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jac-Mi-PJU">
@@ -70,6 +70,9 @@
                                         <constraint firstAttribute="height" constant="50" id="but-Wg-cPq"/>
                                     </constraints>
                                     <state key="normal" image="ic_list"/>
+                                    <connections>
+                                        <action selector="tapToListNotes:" destination="-1" eventType="touchUpInside" id="EFt-2y-2kK"/>
+                                    </connections>
                                 </button>
                             </subviews>
                             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>

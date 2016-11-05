@@ -3,18 +3,144 @@
     <dependencies>
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints with non-1.0 multipliers" minToolsVersion="5.1"/>
     </dependencies>
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ListNotesVC" customModule="MyReminder" customModuleProvider="target">
             <connections>
+                <outlet property="btnMyNotes" destination="F5B-Rl-hEl" id="p0B-ho-uLx"/>
+                <outlet property="btnSharedNotes" destination="P1Q-0b-0jn" id="7yd-M2-D4b"/>
+                <outlet property="tableView" destination="xad-VD-zMy" id="OxH-rj-iFW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
         <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
-            <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="59D-0M-LFR">
+                    <rect key="frame" x="0.0" y="0.0" width="375" height="64"/>
+                    <subviews>
+                        <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="HJl-Gi-6OG">
+                            <rect key="frame" x="0.0" y="18" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="50" id="Ago-iP-t9l"/>
+                                <constraint firstAttribute="width" constant="50" id="ln1-Wr-L8D"/>
+                            </constraints>
+                            <state key="normal" image="ic_back"/>
+                            <connections>
+                                <action selector="tapToBack:" destination="-1" eventType="touchUpInside" id="hMv-eE-C4E"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notes" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="3Db-YA-Akv">
+                            <rect key="frame" x="162.5" y="32" width="50.5" height="21"/>
+                            <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fXy-fI-HKe">
+                            <rect key="frame" x="325" y="18" width="50" height="50"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="50" id="EKY-eI-vvI"/>
+                                <constraint firstAttribute="height" constant="50" id="lcx-UN-jBp"/>
+                            </constraints>
+                            <state key="normal" image="ic_cards"/>
+                            <connections>
+                                <action selector="tapToGoListCards:" destination="-1" eventType="touchUpInside" id="IJH-KM-IUJ"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="HJl-Gi-6OG" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="top" constant="18" id="5Nu-lw-PAS"/>
+                        <constraint firstItem="3Db-YA-Akv" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="top" constant="32" id="6wn-sC-vp0"/>
+                        <constraint firstItem="fXy-fI-HKe" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="3Db-YA-Akv" secondAttribute="trailing" constant="8" id="Aez-MH-h6q"/>
+                        <constraint firstAttribute="height" constant="64" id="GvT-06-oVN"/>
+                        <constraint firstItem="3Db-YA-Akv" firstAttribute="centerX" secondItem="59D-0M-LFR" secondAttribute="centerX" id="WCo-jR-5el"/>
+                        <constraint firstAttribute="trailing" secondItem="fXy-fI-HKe" secondAttribute="trailing" id="epw-vi-e4l"/>
+                        <constraint firstItem="HJl-Gi-6OG" firstAttribute="leading" secondItem="59D-0M-LFR" secondAttribute="leading" id="gPH-TE-OEI"/>
+                        <constraint firstItem="3Db-YA-Akv" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="HJl-Gi-6OG" secondAttribute="trailing" constant="8" id="xIs-sC-rTZ"/>
+                        <constraint firstItem="fXy-fI-HKe" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="top" constant="18" id="zS6-Fl-7jT"/>
+                    </constraints>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="xad-VD-zMy">
+                    <rect key="frame" x="0.0" y="124" width="375" height="543"/>
+                    <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <connections>
+                        <outlet property="dataSource" destination="-1" id="OHq-ta-Kj8"/>
+                        <outlet property="delegate" destination="-1" id="AgP-V4-EES"/>
+                    </connections>
+                </tableView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="a7k-d0-oKg">
+                    <rect key="frame" x="0.0" y="64" width="375" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="F5B-Rl-hEl">
+                            <rect key="frame" x="39" y="7" width="110" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="110" id="2Jm-e0-3XF"/>
+                                <constraint firstAttribute="height" constant="45" id="D4Y-Zy-6oX"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="My Notes">
+                                <color key="titleColor" red="0.84705882352941175" green="0.84705882352941175" blue="0.84705882352941175" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="tapToMyNotes:" destination="-1" eventType="touchUpInside" id="cWD-Xv-JhO"/>
+                            </connections>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="P1Q-0b-0jn">
+                            <rect key="frame" x="226" y="7" width="110" height="45"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="45" id="0fB-qW-HXy"/>
+                                <constraint firstAttribute="width" constant="110" id="gx4-lj-yai"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" type="system" pointSize="16"/>
+                            <color key="tintColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            <state key="normal" title="Shared Notes">
+                                <color key="titleColor" red="0.84705882349999995" green="0.84705882349999995" blue="0.84705882349999995" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <state key="selected">
+                                <color key="titleColor" red="1" green="0.75686274509999996" blue="0.027450980390000001" alpha="1" colorSpace="calibratedRGB"/>
+                            </state>
+                            <connections>
+                                <action selector="tapToSharedNotes:" destination="-1" eventType="touchUpInside" id="SPJ-xe-MOH"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                    <color key="backgroundColor" red="0.20000000000000001" green="0.20000000000000001" blue="0.20000000000000001" alpha="1" colorSpace="calibratedRGB"/>
+                    <constraints>
+                        <constraint firstItem="F5B-Rl-hEl" firstAttribute="centerY" secondItem="a7k-d0-oKg" secondAttribute="centerY" id="1Po-Xv-91M"/>
+                        <constraint firstAttribute="height" constant="60" id="36A-08-NOr"/>
+                        <constraint firstItem="P1Q-0b-0jn" firstAttribute="centerX" secondItem="a7k-d0-oKg" secondAttribute="centerX" multiplier="3/2" id="Eiv-Sh-EJG"/>
+                        <constraint firstItem="P1Q-0b-0jn" firstAttribute="centerY" secondItem="a7k-d0-oKg" secondAttribute="centerY" id="ihY-Ba-J7F"/>
+                        <constraint firstItem="F5B-Rl-hEl" firstAttribute="centerX" secondItem="a7k-d0-oKg" secondAttribute="centerX" multiplier="1/2" id="wtV-2r-Ita"/>
+                    </constraints>
+                </view>
+            </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+            <constraints>
+                <constraint firstAttribute="trailing" secondItem="59D-0M-LFR" secondAttribute="trailing" id="3eO-Pb-E7v"/>
+                <constraint firstAttribute="bottom" secondItem="xad-VD-zMy" secondAttribute="bottom" id="6Na-9k-bnG"/>
+                <constraint firstItem="a7k-d0-oKg" firstAttribute="top" secondItem="59D-0M-LFR" secondAttribute="bottom" id="Gnd-vZ-l2o"/>
+                <constraint firstAttribute="trailing" secondItem="xad-VD-zMy" secondAttribute="trailing" id="Lk5-aN-VQP"/>
+                <constraint firstItem="xad-VD-zMy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W3q-2X-Ay6"/>
+                <constraint firstItem="a7k-d0-oKg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="doF-oN-pZK"/>
+                <constraint firstAttribute="trailing" secondItem="a7k-d0-oKg" secondAttribute="trailing" id="hIN-pp-vWO"/>
+                <constraint firstItem="59D-0M-LFR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rKh-Tu-nfm"/>
+                <constraint firstItem="xad-VD-zMy" firstAttribute="top" secondItem="a7k-d0-oKg" secondAttribute="bottom" id="rNL-Zb-fI5"/>
+                <constraint firstItem="59D-0M-LFR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xeN-E3-NvX"/>
+            </constraints>
+            <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
+            <point key="canvasLocation" x="302.5" y="228.5"/>
         </view>
     </objects>
+    <resources>
+        <image name="ic_back" width="17" height="18"/>
+        <image name="ic_cards" width="17" height="22"/>
+    </resources>
 </document>

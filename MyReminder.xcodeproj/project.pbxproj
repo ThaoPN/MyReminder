@@ -49,6 +49,8 @@
 		848039981DCDA70B00935D3E /* AddNoteVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 848039961DCDA70B00935D3E /* AddNoteVC.xib */; };
 		8480399C1DCDB92000935D3E /* ListNotesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8480399A1DCDB92000935D3E /* ListNotesVC.swift */; };
 		8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480399B1DCDB92000935D3E /* ListNotesVC.xib */; };
+		84CE9F671DCDBF6800B0D134 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9F651DCDBF6800B0D134 /* NoteCell.swift */; };
+		84CE9F681DCDBF6800B0D134 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE9F661DCDBF6800B0D134 /* NoteCell.xib */; };
 		DA7EF86ECE90F514CF5F6F02 /* Pods_MyReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -120,6 +122,8 @@
 		848039961DCDA70B00935D3E /* AddNoteVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = AddNoteVC.xib; sourceTree = "<group>"; };
 		8480399A1DCDB92000935D3E /* ListNotesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ListNotesVC.swift; sourceTree = "<group>"; };
 		8480399B1DCDB92000935D3E /* ListNotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListNotesVC.xib; sourceTree = "<group>"; };
+		84CE9F651DCDBF6800B0D134 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
+		84CE9F661DCDBF6800B0D134 /* NoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
 		8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -492,6 +496,8 @@
 			children = (
 				8480399A1DCDB92000935D3E /* ListNotesVC.swift */,
 				8480399B1DCDB92000935D3E /* ListNotesVC.xib */,
+				84CE9F651DCDBF6800B0D134 /* NoteCell.swift */,
+				84CE9F661DCDBF6800B0D134 /* NoteCell.xib */,
 			);
 			path = ListNotesVC;
 			sourceTree = "<group>";
@@ -615,6 +621,7 @@
 				848038E21DC8874400935D3E /* LaunchScreen.storyboard in Resources */,
 				8480398D1DCD8EAD00935D3E /* MainScreenVC.xib in Resources */,
 				848039061DC88A3E00935D3E /* GoogleService-Info.plist in Resources */,
+				84CE9F681DCDBF6800B0D134 /* NoteCell.xib in Resources */,
 				848039921DCD98EF00935D3E /* DetailsNoteVC.xib in Resources */,
 				848038DF1DC8874400935D3E /* Assets.xcassets in Resources */,
 				8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */,
@@ -769,6 +776,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				8480399C1DCDB92000935D3E /* ListNotesVC.swift in Sources */,
+				84CE9F671DCDBF6800B0D134 /* NoteCell.swift in Sources */,
 				848039861DCD8EAD00935D3E /* KolodaView.swift in Sources */,
 				848039841DCD8EAD00935D3E /* ExampleOverlayView.swift in Sources */,
 				848039291DC88EA000935D3E /* GGNavigationController.swift in Sources */,

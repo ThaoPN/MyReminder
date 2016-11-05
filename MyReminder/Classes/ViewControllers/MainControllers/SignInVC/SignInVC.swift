@@ -96,7 +96,7 @@ class SignInVC: UIViewController {
   // MARK: - Actions
   @IBAction func tapToSignin(sender: AnyObject) {
     view.endEditing(true)
-    
+
 //    if txfEmail.text?.characters.count == 0 || txfPassword.text?.characters.count == 0 {
 //      Common.showAlertWithHUD("Please input Email or Password")
 //      return
@@ -117,11 +117,25 @@ class SignInVC: UIViewController {
 //        Common.showAlertWithHUD("Email or Password is incorrect!")
 //      }
 //    })
-    
-    
+
+
     let vc = MainScreenVC()
     let navi = GGNavigationController(rootViewController: vc)
-    AppDelegate.shareInstance().window?.rootViewController = navi
+
+    UIView.transitionWithView(AppDelegate.shareInstance().window!,
+                              duration:0.5,
+                              options: UIViewAnimationOptions.TransitionCrossDissolve,
+                              animations: {
+                                let oldState: Bool = UIView.areAnimationsEnabled()
+                                UIView.setAnimationsEnabled(false)
+                                AppDelegate.shareInstance().window?.rootViewController = navi
+
+                                UIView.setAnimationsEnabled(oldState)
+      },
+                              completion: {
+                                finished in
+
+    })
   }
 
   @IBAction func tapToSignUp(sender: AnyObject) {

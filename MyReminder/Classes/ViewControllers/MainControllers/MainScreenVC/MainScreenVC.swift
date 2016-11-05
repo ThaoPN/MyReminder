@@ -87,6 +87,23 @@ class MainScreenVC: UIViewController {
   @IBAction func tapToRedo(sender: AnyObject) {
 
   }
+  @IBAction func tapToListNotes(sender: AnyObject) {
+    let navi = GGNavigationController(rootViewController: ListNotesVC())
+    UIView.transitionWithView(AppDelegate.shareInstance().window!,
+                              duration:0.5,
+                              options: UIViewAnimationOptions.TransitionFlipFromLeft,
+                              animations: {
+                                let oldState: Bool = UIView.areAnimationsEnabled()
+                                UIView.setAnimationsEnabled(false)
+                                AppDelegate.shareInstance().window?.rootViewController = navi
+
+                                UIView.setAnimationsEnabled(oldState)
+      },
+                              completion: {
+                                finished in
+
+    })
+  }
 
 }
 
