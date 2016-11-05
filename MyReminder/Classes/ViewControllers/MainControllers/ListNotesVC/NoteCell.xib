@@ -40,16 +40,25 @@
                                 <color key="textColor" red="0.45882352941176469" green="0.45882352941176469" blue="0.45882352941176469" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Share by Tony Adam" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QY0-2j-QfF">
+                                <rect key="frame" x="93" y="43.5" width="172" height="17"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
                         </subviews>
                         <color key="backgroundColor" red="0.92941176470588238" green="0.92941176470588238" blue="0.92941176470588238" alpha="1" colorSpace="calibratedRGB"/>
                         <constraints>
                             <constraint firstItem="gj8-5u-eII" firstAttribute="top" secondItem="9Yl-7N-xUG" secondAttribute="bottom" constant="8" id="1T4-P7-Xrp"/>
                             <constraint firstAttribute="bottom" secondItem="Bxp-oY-g8F" secondAttribute="bottom" constant="15" id="1at-hh-Eeq"/>
+                            <constraint firstItem="QY0-2j-QfF" firstAttribute="top" secondItem="9Yl-7N-xUG" secondAttribute="bottom" constant="8" id="EzA-Ln-ykx"/>
                             <constraint firstAttribute="trailing" secondItem="9Yl-7N-xUG" secondAttribute="trailing" constant="15" id="MIH-l8-mbz"/>
+                            <constraint firstItem="QY0-2j-QfF" firstAttribute="leading" secondItem="gj8-5u-eII" secondAttribute="trailing" constant="8" id="Ygj-zL-2OT"/>
                             <constraint firstItem="9Yl-7N-xUG" firstAttribute="top" secondItem="IpN-DW-Z00" secondAttribute="top" constant="15" id="dNT-tW-kbC"/>
                             <constraint firstItem="gj8-5u-eII" firstAttribute="leading" secondItem="IpN-DW-Z00" secondAttribute="leading" constant="15" id="kpu-zH-Oge"/>
                             <constraint firstItem="9Yl-7N-xUG" firstAttribute="leading" secondItem="IpN-DW-Z00" secondAttribute="leading" constant="15" id="q0o-Vi-cc9"/>
                             <constraint firstItem="Bxp-oY-g8F" firstAttribute="leading" secondItem="IpN-DW-Z00" secondAttribute="leading" constant="15" id="qs7-gt-21S"/>
+                            <constraint firstAttribute="trailing" secondItem="QY0-2j-QfF" secondAttribute="trailing" constant="15" id="rW3-YZ-U4B"/>
                             <constraint firstAttribute="trailing" secondItem="Bxp-oY-g8F" secondAttribute="trailing" constant="15" id="tpY-j7-vSX"/>
                             <constraint firstItem="Bxp-oY-g8F" firstAttribute="top" secondItem="gj8-5u-eII" secondAttribute="bottom" constant="8" id="zrL-jx-2xV"/>
                         </constraints>
