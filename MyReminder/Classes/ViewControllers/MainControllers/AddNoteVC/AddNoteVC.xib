@@ -39,7 +39,7 @@
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" ambiguous="YES" misplaced="YES" text="Add Note" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hIU-iX-HqN">
                             <rect key="frame" x="148" y="32" width="79" height="21"/>
                             <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="18"/>
-                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                            <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-o9-EA3">
@@ -57,6 +57,9 @@
                                 <constraint firstAttribute="width" constant="30" id="GRy-Wx-sJA"/>
                             </constraints>
                             <state key="normal" image="ic_share"/>
+                            <connections>
+                                <action selector="tapToShare:" destination="-1" eventType="touchUpInside" id="PHZ-fl-2lS"/>
+                            </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU9-7j-OBp">
                             <rect key="frame" x="331" y="18" width="30" height="50"/>

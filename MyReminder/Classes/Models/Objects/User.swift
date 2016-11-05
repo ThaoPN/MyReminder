@@ -17,4 +17,6 @@ class User: NSObject {
   var uEmail = ""
   var uPassword = ""
   var uNotes = [Note]()
+
+  var isSelected = false
 }

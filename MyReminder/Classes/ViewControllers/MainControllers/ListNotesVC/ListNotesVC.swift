@@ -38,6 +38,8 @@ class ListNotesVC: UIViewController {
     tableView.registerNib(nib, forCellReuseIdentifier: "NoteCell")
     tableView.rowHeight = UITableViewAutomaticDimension
     tableView.estimatedRowHeight = 200
+    tableView.contentInset.top = 10
+    tableView.contentInset.bottom = 10
   }
 
   override func viewWillAppear(animated: Bool) {

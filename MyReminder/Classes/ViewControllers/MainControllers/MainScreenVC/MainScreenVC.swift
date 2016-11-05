@@ -104,7 +104,7 @@ class MainScreenVC: UIViewController {
 
     })
   }
-
+  
 }
 
 
@@ -153,7 +153,7 @@ extension MainScreenVC: KolodaViewDataSource {
     let card = NSBundle.mainBundle().loadNibNamed("CustomSwipeCardView", owner: self, options: nil)[0] as! CustomSwipeCardView
     //let user = listUser[Int(index)]
     //card.setupCard(user)
-
+    
     return card
   }
 

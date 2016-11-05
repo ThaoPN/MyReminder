@@ -51,6 +51,8 @@
 		8480399D1DCDB92000935D3E /* ListNotesVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 8480399B1DCDB92000935D3E /* ListNotesVC.xib */; };
 		84CE9F671DCDBF6800B0D134 /* NoteCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9F651DCDBF6800B0D134 /* NoteCell.swift */; };
 		84CE9F681DCDBF6800B0D134 /* NoteCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE9F661DCDBF6800B0D134 /* NoteCell.xib */; };
+		84CE9F6C1DCDC4F100B0D134 /* ShareForVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 84CE9F6A1DCDC4F100B0D134 /* ShareForVC.swift */; };
+		84CE9F6D1DCDC4F100B0D134 /* ShareForVC.xib in Resources */ = {isa = PBXBuildFile; fileRef = 84CE9F6B1DCDC4F100B0D134 /* ShareForVC.xib */; };
 		DA7EF86ECE90F514CF5F6F02 /* Pods_MyReminderTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */; };
 /* End PBXBuildFile section */
 
@@ -124,6 +126,8 @@
 		8480399B1DCDB92000935D3E /* ListNotesVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ListNotesVC.xib; sourceTree = "<group>"; };
 		84CE9F651DCDBF6800B0D134 /* NoteCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = NoteCell.swift; sourceTree = "<group>"; };
 		84CE9F661DCDBF6800B0D134 /* NoteCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = NoteCell.xib; sourceTree = "<group>"; };
+		84CE9F6A1DCDC4F100B0D134 /* ShareForVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ShareForVC.swift; sourceTree = "<group>"; };
+		84CE9F6B1DCDC4F100B0D134 /* ShareForVC.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = ShareForVC.xib; sourceTree = "<group>"; };
 		8769F29A5B85760CEF6E2692 /* Pods_MyReminder.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminder.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		A72735DFAB8DD9CC58585B78 /* Pods_MyReminderTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MyReminderTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		C08CC8CB7556CBA887A07FAF /* Pods-MyReminderUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-MyReminderUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-MyReminderUITests/Pods-MyReminderUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -328,6 +332,7 @@
 		848039181DC88EA000935D3E /* MainControllers */ = {
 			isa = PBXGroup;
 			children = (
+				84CE9F691DCDC4D800B0D134 /* ShareForVC */,
 				848039991DCDB90F00935D3E /* ListNotesVC */,
 				848039941DCDA6E900935D3E /* AddNoteVC */,
 				8480398E1DCD98DD00935D3E /* DetailsNoteVC */,
@@ -502,6 +507,15 @@
 			path = ListNotesVC;
 			sourceTree = "<group>";
 		};
+		84CE9F691DCDC4D800B0D134 /* ShareForVC */ = {
+			isa = PBXGroup;
+			children = (
+				84CE9F6A1DCDC4F100B0D134 /* ShareForVC.swift */,
+				84CE9F6B1DCDC4F100B0D134 /* ShareForVC.xib */,
+			);
+			path = ShareForVC;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -621,6 +635,7 @@
 				848038E21DC8874400935D3E /* LaunchScreen.storyboard in Resources */,
 				8480398D1DCD8EAD00935D3E /* MainScreenVC.xib in Resources */,
 				848039061DC88A3E00935D3E /* GoogleService-Info.plist in Resources */,
+				84CE9F6D1DCDC4F100B0D134 /* ShareForVC.xib in Resources */,
 				84CE9F681DCDBF6800B0D134 /* NoteCell.xib in Resources */,
 				848039921DCD98EF00935D3E /* DetailsNoteVC.xib in Resources */,
 				848038DF1DC8874400935D3E /* Assets.xcassets in Resources */,
@@ -792,6 +807,7 @@
 				848039911DCD98EF00935D3E /* DetailsNoteVC.swift in Sources */,
 				8480392D1DC97E7D00935D3E /* Note.swift in Sources */,
 				848039851DCD8EAD00935D3E /* DraggableCardView.swift in Sources */,
+				84CE9F6C1DCDC4F100B0D134 /* ShareForVC.swift in Sources */,
 				8480392B1DC88EA000935D3E /* GGTabbarParentVC.swift in Sources */,
 				848039581DCB882100935D3E /* DHIndicator.swift in Sources */,
 				848039271DC88EA000935D3E /* Message.swift in Sources */,

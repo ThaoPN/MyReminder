@@ -58,21 +58,21 @@ class AddNoteVC: UIViewController {
     btnHight.setTitleColor(UIColor.blackColor(), forState: .Normal)
     btnMedium.backgroundColor = UIColor.whiteColor()
     btnLow.backgroundColor = UIColor.whiteColor()
-    
+
   }
-  
+
   private func setMedium() {
-    
+
   }
-  
+
   private func setLow() {
-    
+
   }
-  
+
   private func setPriority(index: Int) {
 //    switch index {
 //    case 0:
-//      
+//
 //    default:
 //      break;
 //    }
@@ -103,6 +103,10 @@ class AddNoteVC: UIViewController {
   }
   @IBAction func tapToSetPriority(sender: AnyObject) {
     viewPriority.hidden = false
+  }
+  @IBAction func tapToShare(sender: AnyObject) {
+    let vc = ShareForVC()
+    navigationController?.pushViewController(vc, animated: true)
   }
 
 

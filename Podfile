@@ -9,6 +9,7 @@ target 'MyReminder' do
   pod 'ObjectMapper', '~> 1.3'
   pod 'PKHUD', '~> 3.1.0'
   pod 'pop', '~> 1.0.9'
+  pod 'AsyncSwift', '~> 1.7.2'
 
   # Pods for MyReminder
 

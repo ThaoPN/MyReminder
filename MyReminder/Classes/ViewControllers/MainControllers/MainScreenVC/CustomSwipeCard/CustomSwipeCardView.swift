@@ -8,6 +8,10 @@
 
 import UIKit
 
+protocol CustomSwipeCardViewDelegate: NSObjectProtocol {
+  func shareNote(note: Note)
+}
+
 class CustomSwipeCardView: UIView {
 
   //MARK: - Outlets
@@ -18,6 +22,10 @@ class CustomSwipeCardView: UIView {
   @IBOutlet weak var lblContent: UILabel!
   @IBOutlet weak var btnShare: UIButton!
 
+  //MARK: - Variables
+  weak var delegate: CustomSwipeCardViewDelegate?
+
+  private var myNote: Note!
 
   //MARK: - Publics
   override func awakeFromNib() {
@@ -36,7 +44,7 @@ class CustomSwipeCardView: UIView {
 
   }
 
-  internal func setupCard(user: User) {
+  internal func setupCard(note: Note) {
 
   }
 
@@ -49,6 +57,6 @@ class CustomSwipeCardView: UIView {
   }
 
   @IBAction func tapToShare(sender: AnyObject) {
-
+    //delegate?.shareNote(myNote)
   }
 }

@@ -1,4 +1,5 @@
 PODS:
+  - AsyncSwift (1.7.4)
   - Firebase/Core (3.8.0):
     - FirebaseAnalytics (= 3.5.1)
     - FirebaseCore (= 3.4.4)
@@ -28,12 +29,14 @@ PODS:
   - pop (1.0.9)
 
 DEPENDENCIES:
+  - AsyncSwift (~> 1.7.2)
   - Firebase/Database
   - ObjectMapper (~> 1.3)
   - PKHUD (~> 3.1.0)
   - pop (~> 1.0.9)
 
 SPEC CHECKSUMS:
+  AsyncSwift: cecffe40af6e09558ed25dd71fabf04836b5eaf4
   Firebase: fdbecadb7b5cbef2774852d4fa659b9daf11f2af
   FirebaseAnalytics: 6e58fc9b397664369ac7617fb0ba93fab6ba7b5b
   FirebaseCore: d0ed25f27b6f9158eccc439f1be6f92e81207e28
@@ -46,6 +49,6 @@ SPEC CHECKSUMS:
   PKHUD: 4167eccdb1b3a892fd80ce2b51cb6ba412a889ab
   pop: f667631a5108a2e60d9e8797c9b32ddaf2080bce
 
-PODFILE CHECKSUM: 2491a6aff040dae939a790e19e76ccb6f9e52c49
+PODFILE CHECKSUM: 58037c72a676d1f70a3a887e569898ba50f74ad7
 
 COCOAPODS: 1.0.1

@@ -81,5 +81,10 @@ class DetailsNoteVC: UIViewController {
     viewPriority.hidden = false
   }
 
+  @IBAction func tapToShare(sender: AnyObject) {
+    let vc = ShareForVC()
+    navigationController?.pushViewController(vc, animated: true)
+  }
+
 
 }
