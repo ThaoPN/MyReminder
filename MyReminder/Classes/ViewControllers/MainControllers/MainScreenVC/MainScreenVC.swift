@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import ObjectMapper
 
 class MainScreenVC: UIViewController {
 
@@ -16,8 +18,10 @@ class MainScreenVC: UIViewController {
   @IBOutlet weak var viewContent: UIView!
   @IBOutlet weak var consHeightViewInfoUser: NSLayoutConstraint!
   @IBOutlet weak var consHeightContentView: NSLayoutConstraint!
+  @IBOutlet weak var imvNoNote: UIImageView!
 
   // MARK: - Variables
+  private var notes = [Note]()
 
   // MARK: - Lifecycle
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -46,12 +50,14 @@ class MainScreenVC: UIViewController {
     configViewDidLoad()
     viewInfoUser.dataSource = self
     viewInfoUser.delegate = self
+
+    loadData()
   }
-  
+
   override func viewDidAppear(animated: Bool) {
     super.viewDidAppear(animated)
     if let _ = NSUserDefaults.standardUserDefaults().objectForKey(kTutorialMainScreen) {
-      
+
     } else {
       NSUserDefaults.standardUserDefaults().setValue("1", forKey: kTutorialMainScreen)
       let vc = TutorialVC(isAddNote: false)
@@ -83,6 +89,21 @@ class MainScreenVC: UIViewController {
     //loadUsers()
   }
 
+  private func loadData() {
+    if let u = AppDelegate.shareInstance().currentUser, ref = u.uRef {
+      //      DHIndicator.show()
+      //      var task = 2
+      ref.child("\(u.uID)/\(KeyUser.userNotes)").queryOrderedByKey().observeEventType(.ChildAdded, withBlock: {[weak self] (snapshot) in
+        guard let strongSelf = self else { return }
+        print(snapshot.value)
+        if let note = Mapper<Note>().map(snapshot.value) {
+          strongSelf.notes.append(note)
+          strongSelf.viewInfoUser.reloadData()
+        }
+      })
+    }
+  }
+
   // MARK: - Actions
   @IBAction func tapToAddNote(sender: AnyObject) {
     let vc = AddNoteVC()
@@ -92,7 +113,7 @@ class MainScreenVC: UIViewController {
   @IBAction func tapToRedo(sender: AnyObject) {
     viewInfoUser.revertAction()
   }
-  
+
   @IBAction func tapToListNotes(sender: AnyObject) {
     let navi = GGNavigationController(rootViewController: ListNotesVC())
     UIView.transitionWithView(AppDelegate.shareInstance().window!,
@@ -110,7 +131,7 @@ class MainScreenVC: UIViewController {
 
     })
   }
-  
+
 }
 
 
@@ -144,7 +165,8 @@ extension MainScreenVC: KolodaViewDelegate {
 
   func koloda(koloda: KolodaView, didSelectCardAtIndex index: UInt) {
     print("tap to card")
-    let vc = DetailsNoteVC()
+    let note = notes[Int(index)]
+    let vc = DetailsNoteVC(note: note)
     navigationController?.pushViewController(vc, animated: true)
   }
 }
@@ -153,14 +175,21 @@ extension MainScreenVC: KolodaViewDelegate {
 extension MainScreenVC: KolodaViewDataSource {
 
   func koloda(kolodaNumberOfCards koloda: KolodaView) -> UInt {
-    return UInt(3)
+    if notes.count == 0 {
+      imvNoNote.hidden = false
+    } else {
+      imvNoNote.hidden = true
+    }
+    return UInt(notes.count)
   }
 
   func koloda(koloda: KolodaView, viewForCardAtIndex index: UInt) -> UIView {
     let card = NSBundle.mainBundle().loadNibNamed("CustomSwipeCardView", owner: self, options: nil)[0] as! CustomSwipeCardView
     //let user = listUser[Int(index)]
     //card.setupCard(user)
-    
+    let note = notes[Int(index)]
+    card.setupCard(note)
+
     return card
   }
 

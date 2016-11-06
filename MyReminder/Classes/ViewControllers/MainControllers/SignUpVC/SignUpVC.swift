@@ -36,7 +36,7 @@ class SignUpVC: UIViewController {
   }
 
   deinit {
-    //ref.child("Users").removeObserverWithHandle(_refHandle)
+    ref.child("Users").removeObserverWithHandle(_refHandle)
   }
 
 // MARK: - Override methods
@@ -45,14 +45,14 @@ class SignUpVC: UIViewController {
 
     ref = FIRDatabase.database().reference()
 
-//    DHIndicator.show()
-//    _refHandle = ref.child("Users").queryOrderedByKey().observeEventType(.Value, withBlock: {[weak self] (snapshot) in
-//      guard let strongSelf = self else { return }
-//
-//      strongSelf.usersTmp.append(snapshot)
-//      print(strongSelf.usersTmp)
-//      DHIndicator.hide()
-//    })
+    DHIndicator.show()
+    _refHandle = ref.child("Users").queryOrderedByKey().observeEventType(.Value, withBlock: {[weak self] (snapshot) in
+      guard let strongSelf = self else { return }
+
+      strongSelf.usersTmp.append(snapshot)
+      print(strongSelf.usersTmp)
+      DHIndicator.hide()
+    })
 
     txfEmail.layer.cornerRadius = 45/2
     let leftViewEmail = UIView(frame: CGRect(x: 0, y: 0, width: 40, height: txfEmail.frame.size.height))
@@ -100,29 +100,37 @@ class SignUpVC: UIViewController {
     consTopTitle.constant = 162
   }
 // MARK: - Private methods
-  private func signUpWith(email: String, password: String) {
-    let uuid = NSUUID().UUIDString
+  private func signUpWith(userName: String, password: String) {
+    DHIndicator.show()
+    let UUID = NSUUID().UUIDString
 
-    let info = [KeyUser.userID: uuid,
-                KeyUser.userEmail: email,
+    let info = [KeyUser.userID: UUID,
+                KeyUser.userName: userName,
                 KeyUser.userPassword: password]
-    let path = "Users/\(uuid)"
+    let path = "Users/\(UUID)"
 
-    ref.child(path).setValue(info)
+    ref.child(path).setValue(info) { (error, ref) in
+      if let e = error {
+        print("signup error: \(e.localizedDescription)")
+      } else {
+        DHIndicator.hide()
+        self.dismissViewControllerAnimated(true, completion: nil)
+      }
+    }
   }
 
 // MARK: - Actions
   @IBAction func tapToSignUp(sender: AnyObject) {
     if txfEmail.text?.characters.count == 0 || txfPassword.text?.characters.count == 0 {
-      Common.showAlertWithHUD("Please input Email or Password")
+      Common.showAlertWithHUD("Please input Username or Password")
       return
     }
 
-    ref.child("Users").queryOrderedByChild(KeyUser.userEmail).queryEqualToValue(txfEmail.text!).observeSingleEventOfType(.Value, withBlock: {[weak self] (snapshot) in
+    ref.child("Users").queryOrderedByChild(KeyUser.userName).queryEqualToValue(txfEmail.text!).observeSingleEventOfType(.Value, withBlock: {[weak self] (snapshot) in
       guard let strongSelf = self else { return }
 
       if snapshot.childrenCount > 0 {
-        Common.showAlertWithHUD("Your email is existed!")
+        Common.showAlertWithHUD("Your Username is existed!")
       } else {
         strongSelf.signUpWith(strongSelf.txfEmail.text!, password: strongSelf.txfPassword.text!)
       }

@@ -16,9 +16,10 @@ struct MyColor {
 // MARK: - Constant
 struct KeyUser {
   static let userID = "ID"
-  static let userEmail = "Email"
+  static let userName = "Username"
   static let userPassword = "Password"
   static let userNotes = "Notes"
+  static let userSharedNote = "SharedNotes"
 }
 
 struct KeyNote {
@@ -26,6 +27,14 @@ struct KeyNote {
   static let noteTitle = "Title"
   static let noteContent = "Content"
   static let notePriority = "Priority"
+  static let noteCreatedAt = "CreatedAt"
+  static let noteOwner = "Owner"
+}
+
+struct Priority {
+  static let hard = "Hard"
+  static let medium = "Medium"
+  static let easy = "Easy"
 }
 
 // MARK: - Size Screen

@@ -18,6 +18,7 @@ class DetailsNoteVC: UIViewController {
   @IBOutlet weak var txvContent: UITextView!
 
   // MARK: - Variables
+  private var myNote: Note!
 
   // MARK: - Init methods
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -28,9 +29,11 @@ class DetailsNoteVC: UIViewController {
     super.init(coder: aDecoder)
   }
 
-  convenience init() {
+  convenience init(note: Note) {
     self.init(nibName: nil, bundle: nil)
+    myNote = note
   }
+
   // MARK: - Override methods
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -54,6 +57,10 @@ class DetailsNoteVC: UIViewController {
     viewPriority.layer.shadowOffset = CGSize(width: 0, height: -2)
     viewPriority.layer.shadowOpacity = 0.7
     viewPriority.layer.shadowRadius = 2.0
+
+    lblTitle.text = myNote.nTitle
+    txvContent.text = myNote.nContent
+
   }
 
   override func viewDidAppear(animated: Bool) {

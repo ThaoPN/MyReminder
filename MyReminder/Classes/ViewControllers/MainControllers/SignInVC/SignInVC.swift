@@ -8,6 +8,7 @@
 
 import UIKit
 import Firebase
+import ObjectMapper
 
 class SignInVC: UIViewController {
   // MARK: - Outlets
@@ -93,32 +94,7 @@ class SignInVC: UIViewController {
 
   }
 
-  // MARK: - Actions
-  @IBAction func tapToSignin(sender: AnyObject) {
-    view.endEditing(true)
-
-//    if txfEmail.text?.characters.count == 0 || txfPassword.text?.characters.count == 0 {
-//      Common.showAlertWithHUD("Please input Email or Password")
-//      return
-//    }
-//
-//    ref.child("Users").queryOrderedByChild(KeyUser.userEmail).queryEqualToValue(txfEmail.text!).observeSingleEventOfType(.Value, withBlock: {[weak self] (snapshot) in
-//      guard let strongSelf = self else {return}
-//      print(snapshot.value)
-//      if snapshot.childrenCount > 0 {
-//        for d in snapshot.children.allObjects as! [FIRDataSnapshot] {
-//          if d.value![KeyUser.userPassword] as! String == strongSelf.txfPassword.text! {
-//            print("login ok")
-//            return
-//          }
-//        }
-//        Common.showAlertWithHUD("Email or Password is incorrect!")
-//      } else {
-//        Common.showAlertWithHUD("Email or Password is incorrect!")
-//      }
-//    })
-
-
+  private func gotoMainScreen() {
     let vc = MainScreenVC()
     let navi = GGNavigationController(rootViewController: vc)
 
@@ -135,6 +111,39 @@ class SignInVC: UIViewController {
                               completion: {
                                 finished in
 
+    })
+  }
+
+  // MARK: - Actions
+  @IBAction func tapToSignin(sender: AnyObject) {
+    view.endEditing(true)
+
+    if txfEmail.text?.characters.count == 0 || txfPassword.text?.characters.count == 0 {
+      Common.showAlertWithHUD("Please input Username or Password")
+      return
+    }
+    DHIndicator.show()
+    ref.child("Users").queryOrderedByChild(KeyUser.userName).queryEqualToValue(txfEmail.text!).observeSingleEventOfType(.Value, withBlock: {[weak self] (snapshot) in
+      guard let strongSelf = self else {return}
+      DHIndicator.hide()
+      print(snapshot.value)
+      if snapshot.childrenCount > 0 {
+        for d in snapshot.children.allObjects as! [FIRDataSnapshot] {
+          if d.value![KeyUser.userPassword] as! String == strongSelf.txfPassword.text! {
+            if let user = Mapper<User>().map(d.value) {
+              user.uRef = snapshot.ref
+              AppDelegate.shareInstance().currentUser = user
+              strongSelf.gotoMainScreen()
+            return
+            } else {
+              Common.showAlertWithHUD("Cannot get your account information!")
+            }
+          }
+        }
+        Common.showAlertWithHUD("Username or Password is incorrect!")
+      } else {
+        Common.showAlertWithHUD("Username or Password is incorrect!")
+      }
     })
   }
 

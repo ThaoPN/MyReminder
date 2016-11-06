@@ -9,6 +9,7 @@
             <connections>
                 <outlet property="consHeightContentView" destination="rYW-9E-Nnk" id="qxw-QG-jDk"/>
                 <outlet property="consHeightViewInfoUser" destination="UXZ-AL-fVW" id="bl6-bK-fPm"/>
+                <outlet property="imvNoNote" destination="fcA-a5-rxz" id="ak4-zA-cqP"/>
                 <outlet property="scrollView" destination="ruf-Vz-73Y" id="gxE-1o-JsJ"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
                 <outlet property="viewContent" destination="WDb-yN-iGT" id="8VI-X9-Xkb"/>
@@ -100,11 +101,20 @@
                         <constraint firstItem="WDb-yN-iGT" firstAttribute="top" secondItem="ruf-Vz-73Y" secondAttribute="top" id="pLM-5D-Rai"/>
                     </constraints>
                 </scrollView>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No_Notes" translatesAutoresizingMaskIntoConstraints="NO" id="fcA-a5-rxz">
+                    <rect key="frame" x="94" y="215" width="186" height="238"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="186" id="WcJ-oa-d0c"/>
+                        <constraint firstAttribute="height" constant="238" id="cG7-i3-WOa"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
             <constraints>
+                <constraint firstItem="fcA-a5-rxz" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="L4s-0J-mqh"/>
                 <constraint firstItem="ruf-Vz-73Y" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="crn-Bc-yGc"/>
                 <constraint firstAttribute="trailing" secondItem="ruf-Vz-73Y" secondAttribute="trailing" id="dWL-iQ-CwY"/>
+                <constraint firstItem="fcA-a5-rxz" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="gle-Dj-Ibo"/>
                 <constraint firstAttribute="bottom" secondItem="ruf-Vz-73Y" secondAttribute="bottom" id="kZ0-4g-a1f"/>
                 <constraint firstItem="ruf-Vz-73Y" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="pZt-bd-M74"/>
             </constraints>
@@ -113,6 +123,7 @@
         </view>
     </objects>
     <resources>
+        <image name="No_Notes" width="186" height="238"/>
         <image name="ic_add" width="64" height="64"/>
         <image name="ic_list" width="18" height="24"/>
         <image name="ic_redo" width="44" height="37"/>

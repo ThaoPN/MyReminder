@@ -45,7 +45,18 @@ class CustomSwipeCardView: UIView {
   }
 
   internal func setupCard(note: Note) {
+    myNote = note
 
+    lblTitle.text = note.nTitle
+
+    let formatTm = Common.getDateFormat()
+    let date = formatTm.dateFromString(note.nCreated)
+    let format = Common.getDateFormat()
+    format.dateFormat = "dd MMM, yyyy"
+    lblDate.text = format.stringFromDate(date!)
+
+    lblOwner.text = note.nOwner
+    lblContent.text = note.nContent
   }
 
   //MARK: - Privates
@@ -57,6 +68,6 @@ class CustomSwipeCardView: UIView {
   }
 
   @IBAction func tapToShare(sender: AnyObject) {
-    //delegate?.shareNote(myNote)
+    delegate?.shareNote(myNote)
   }
 }

@@ -10,6 +10,7 @@
             <connections>
                 <outlet property="btnMyNotes" destination="F5B-Rl-hEl" id="p0B-ho-uLx"/>
                 <outlet property="btnSharedNotes" destination="P1Q-0b-0jn" id="7yd-M2-D4b"/>
+                <outlet property="imvNoNotes" destination="JEw-vB-gFd" id="rlG-RO-pxw"/>
                 <outlet property="tableView" destination="xad-VD-zMy" id="OxH-rj-iFW"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -121,6 +122,13 @@
                         <constraint firstItem="F5B-Rl-hEl" firstAttribute="centerX" secondItem="a7k-d0-oKg" secondAttribute="centerX" multiplier="1/2" id="wtV-2r-Ita"/>
                     </constraints>
                 </view>
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No_Notes" translatesAutoresizingMaskIntoConstraints="NO" id="JEw-vB-gFd">
+                    <rect key="frame" x="94.5" y="214.5" width="186" height="238"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="238" id="Mpg-sn-x9o"/>
+                        <constraint firstAttribute="width" constant="186" id="RGg-GJ-qLB"/>
+                    </constraints>
+                </imageView>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
@@ -131,8 +139,10 @@
                 <constraint firstItem="xad-VD-zMy" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="W3q-2X-Ay6"/>
                 <constraint firstItem="a7k-d0-oKg" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="doF-oN-pZK"/>
                 <constraint firstAttribute="trailing" secondItem="a7k-d0-oKg" secondAttribute="trailing" id="hIN-pp-vWO"/>
+                <constraint firstItem="JEw-vB-gFd" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="mBu-ch-P9M"/>
                 <constraint firstItem="59D-0M-LFR" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="rKh-Tu-nfm"/>
                 <constraint firstItem="xad-VD-zMy" firstAttribute="top" secondItem="a7k-d0-oKg" secondAttribute="bottom" id="rNL-Zb-fI5"/>
+                <constraint firstItem="JEw-vB-gFd" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="t0M-o5-f6q"/>
                 <constraint firstItem="59D-0M-LFR" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" id="xeN-E3-NvX"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
@@ -140,6 +150,7 @@
         </view>
     </objects>
     <resources>
+        <image name="No_Notes" width="186" height="238"/>
         <image name="ic_cards" width="17" height="22"/>
         <image name="ic_setting" width="22" height="22"/>
     </resources>

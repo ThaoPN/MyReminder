@@ -73,6 +73,7 @@
             </tableViewCellContentView>
             <connections>
                 <outlet property="lblContent" destination="Bxp-oY-g8F" id="NBX-UK-Y5y"/>
+                <outlet property="lblOwner" destination="QY0-2j-QfF" id="iby-bA-AK4"/>
                 <outlet property="lblPriority" destination="gj8-5u-eII" id="CA4-yT-Wm9"/>
                 <outlet property="lblTitle" destination="9Yl-7N-xUG" id="oDs-Ag-zbR"/>
             </connections>

@@ -61,7 +61,7 @@ class ShareForVC: UIViewController {
   private func fakeData() {
     for _ in 1...10 {
       let u = User()
-      u.uFullName = "abc"
+      u.uUsername = "abc"
       users.append(u)
     }
     tableView.reloadData()
@@ -118,7 +118,7 @@ extension ShareForVC: UITableViewDataSource {
     let cell = tableView.dequeueReusableCellWithIdentifier("cell")
 
     let u = users[indexPath.row]
-    cell?.textLabel?.text = u.uFullName
+    cell?.textLabel?.text = u.uUsername
 
     let checkImv = UIImageView(image: UIImage(named: "ic_check"))
     if u.isSelected {

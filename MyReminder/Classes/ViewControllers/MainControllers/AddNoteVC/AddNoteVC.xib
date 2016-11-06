@@ -63,6 +63,9 @@
                             <state key="normal" title="Done">
                                 <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                             </state>
+                            <connections>
+                                <action selector="tapToDone:" destination="-1" eventType="touchUpInside" id="if1-M6-gDy"/>
+                            </connections>
                         </button>
                     </subviews>
                     <color key="backgroundColor" red="1" green="0.75686274509803919" blue="0.027450980392156862" alpha="1" colorSpace="calibratedRGB"/>
@@ -80,20 +83,9 @@
                         <constraint firstItem="vW7-gJ-6y0" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="18" id="yjF-Cb-Mfp"/>
                     </constraints>
                 </view>
-                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JED-dW-kCX">
+                <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JED-dW-kCX">
                     <rect key="frame" x="20" y="84" width="335" height="503"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <string key="text">NEW WORDS 1
-
-- There are many variations of passages of Lorem Ipsum available. 
-
-- But the majority have suffered alteration in some form.
-
-- If you are going to use a passage of Lorem Ipsum.
-
--  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks.
-
--   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour </string>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>

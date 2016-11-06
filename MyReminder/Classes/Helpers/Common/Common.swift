@@ -425,6 +425,13 @@ class Common: NSObject {
     return "\(monthName) " + convertIntToString(int: day) + ", \(year)"
   }
 
+  class func convertDateToString(date: NSDate) -> String {
+
+    let dateFormatter = getDateFormat()
+
+    return dateFormatter.stringFromDate(date)
+  }
+
   class func convertIntToString(int int: Int!) -> String {
     if int < 10 {
       return "0\(int)"
@@ -533,8 +540,8 @@ class Common: NSObject {
 
   class func getDateFormat(timeZone: NSTimeZone = NSTimeZone(name: "UTC")!) -> NSDateFormatter {
     let dateFormatter = NSDateFormatter()
-    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ssZ"
-    dateFormatter.timeZone = timeZone
+    dateFormatter.dateFormat = "yyyy-MM-dd'T'HH:mm:ss.000'Z'"
+//    dateFormatter.timeZone = timeZone
     dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
     return dateFormatter
   }
@@ -553,6 +560,23 @@ class Common: NSObject {
     dateFormatter.timeZone = timeZone
     dateFormatter.locale = NSLocale(localeIdentifier: "en_US")
     return dateFormatter
+  }
+
+  class func numberOfDaysUntilDateTime(toDateTime: NSDate, inTimeZone timeZone: NSTimeZone? = nil) -> Int {
+    let today = NSDate()
+
+    let calendar = NSCalendar.currentCalendar()
+    if let timeZone = timeZone {
+      calendar.timeZone = timeZone
+    }
+
+    var fromDate: NSDate?, toDate: NSDate?
+
+    calendar.rangeOfUnit(.Day, startDate: &fromDate, interval: nil, forDate: today)
+    calendar.rangeOfUnit(.Day, startDate: &toDate, interval: nil, forDate: toDateTime)
+
+    let difference = calendar.components(.Day, fromDate: fromDate!, toDate: toDate!, options: [])
+    return difference.day
   }
 
   class func hideGradientBackgroundFromUIWebView(webview view: UIView) {
@@ -587,7 +611,7 @@ class Common: NSObject {
     blurView.frame = view.bounds
 //    blurView.translatesAutoresizingMaskIntoConstraints = false
     view.insertSubview(blurView, atIndex: 0)
-    
+
 
 //    view.addConstraint(NSLayoutConstraint(item: blurView,
 //      attribute: .Height, relatedBy: .Equal, toItem: view,
