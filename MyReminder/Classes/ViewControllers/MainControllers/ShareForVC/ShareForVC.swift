@@ -65,13 +65,13 @@ class ShareForVC: UIViewController {
   private func fakeData() {
     let ref = FIRDatabase.database().reference()
     DHIndicator.show()
-    
+
     var handle: FIRDatabaseHandle! = nil
-    
+
     func removeObs() {
       ref.removeObserverWithHandle(handle)
     }
-    
+
     handle = ref.child("Users").queryOrderedByKey().observeEventType(.Value, withBlock: {[weak self] (snapshot) in
       guard let strongSelf = self else { return }
 
@@ -86,17 +86,17 @@ class ShareForVC: UIViewController {
       DHIndicator.hide()
       strongSelf.tableView.reloadData()
     })
-    
-    
+
+
 
 //    for _ in 1...10 {
 //      let u = User()
 //      u.uUsername = "abc"
 //      users.append(u)
 //    }
-    
+
   }
-  
+
   private func checkExisted(user: User) -> Bool {
     for u in users {
       if u.uUsername == user.uUsername {
@@ -115,23 +115,23 @@ class ShareForVC: UIViewController {
     consWidthViewFinished.constant = 175
     consHeightViewFinished.constant = 175
 
-    UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.8, initialSpringVelocity: 0.8, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+    UIView.animateWithDuration(0.4, delay: 0.0, usingSpringWithDamping: 0.5, initialSpringVelocity: 0.5, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
 
       self.viewFinishedShare.setNeedsLayout()
       self.viewFinishedShare.layoutIfNeeded()
     }) { (finish) -> Void in
-      UIView.animateWithDuration(0.3, animations: {
+      UIView.animateWithDuration(0.2, animations: {
         self.imvCheck.alpha = 1
         self.lblShared.alpha = 1
       })
       //Animation DONE
     }
 
-    Async.main(after: 2) {
+    Async.main(after: 1.5) {
       self.hideFinishedView()
     }
   }
-  
+
   private func shareWithIndex(index: Int) {
     let u = users[index]
     showFinishedView()
@@ -139,9 +139,9 @@ class ShareForVC: UIViewController {
   }
 
   private func postNote(user: User) {
-    
+
     let UUID = NSUUID().UUIDString
-    
+
     let strNoteTitle = myNote.nTitle
     let strCreateAt = myNote.nCreated
     let info = [KeyNote.noteContent: myNote.nContent,
@@ -150,12 +150,12 @@ class ShareForVC: UIViewController {
                 KeyNote.noteTitle: strNoteTitle,
                 KeyNote.noteCreatedAt: strCreateAt,
                 KeyNote.noteOwner: AppDelegate.shareInstance().currentUser.uUsername]
-    
+
     //DHIndicator.show()
     if let currentUser = AppDelegate.shareInstance().currentUser, ref = currentUser.uRef {
       ref.child("\(user.uID)/\(KeyUser.userSharedNote)/\(UUID)").setValue(info, withCompletionBlock: {[weak self] (error, noteRef) in
 //        guard let strongSelf = self else { return }
-        
+
         //DHIndicator.hide()
         if let error = error {
           print("post note error: \(error.localizedDescription)")
@@ -166,7 +166,7 @@ class ShareForVC: UIViewController {
       })
     }
   }
-  
+
   private func hideFinishedView() {
     viewFinishedShare.alpha = 0
     consWidthViewFinished.constant = 0

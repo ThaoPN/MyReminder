@@ -122,7 +122,7 @@
                         <constraint firstItem="F5B-Rl-hEl" firstAttribute="centerX" secondItem="a7k-d0-oKg" secondAttribute="centerX" multiplier="1/2" id="wtV-2r-Ita"/>
                     </constraints>
                 </view>
-                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No_Notes" translatesAutoresizingMaskIntoConstraints="NO" id="JEw-vB-gFd">
+                <imageView hidden="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="No_Notes" translatesAutoresizingMaskIntoConstraints="NO" id="JEw-vB-gFd">
                     <rect key="frame" x="94.5" y="214.5" width="186" height="238"/>
                     <constraints>
                         <constraint firstAttribute="height" constant="238" id="Mpg-sn-x9o"/>
@@ -150,7 +150,7 @@
         </view>
     </objects>
     <resources>
-        <image name="No_Notes" width="186" height="238"/>
+        <image name="No_Notes" width="112" height="143"/>
         <image name="ic_cards" width="17" height="22"/>
         <image name="ic_setting" width="22" height="22"/>
     </resources>

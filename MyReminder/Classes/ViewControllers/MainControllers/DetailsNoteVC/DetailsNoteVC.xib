@@ -11,7 +11,7 @@
                 <outlet property="btnHight" destination="JEp-9v-1dD" id="IK4-bl-XDl"/>
                 <outlet property="btnLow" destination="tbE-3U-h5U" id="1nE-Re-ZTc"/>
                 <outlet property="btnMedium" destination="13C-3N-b22" id="o03-EY-ick"/>
-                <outlet property="btnShare" destination="Hh1-jx-lg4" id="sxS-dk-QeS"/>
+                <outlet property="btnShare" destination="fDB-kc-rRN" id="9rD-BA-keH"/>
                 <outlet property="lblTitle" destination="hIU-iX-HqN" id="BYW-Jr-yTf"/>
                 <outlet property="txvContent" destination="JED-dW-kCX" id="bVs-SJ-Z6g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
@@ -44,15 +44,15 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="IRb-o9-EA3">
-                            <rect key="frame" x="255" y="18" width="30" height="50"/>
+                            <rect key="frame" x="323" y="18" width="0.0" height="50"/>
                             <constraints>
-                                <constraint firstAttribute="width" constant="30" id="I6x-Y6-Sb9"/>
+                                <constraint firstAttribute="width" id="I6x-Y6-Sb9"/>
                                 <constraint firstAttribute="height" constant="50" id="Jj9-PX-Jsw"/>
                             </constraints>
                             <state key="normal" image="ic_search"/>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fDB-kc-rRN">
-                            <rect key="frame" x="293" y="18" width="30" height="50"/>
+                            <rect key="frame" x="331" y="18" width="30" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="625-a7-z78"/>
                                 <constraint firstAttribute="width" constant="30" id="GRy-Wx-sJA"/>
@@ -63,10 +63,10 @@
                             </connections>
                         </button>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="AU9-7j-OBp">
-                            <rect key="frame" x="331" y="18" width="30" height="50"/>
+                            <rect key="frame" x="361" y="18" width="0.0" height="50"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="50" id="jlf-Jf-VbM"/>
-                                <constraint firstAttribute="width" constant="30" id="pOi-cE-pWm"/>
+                                <constraint firstAttribute="width" id="pOi-cE-pWm"/>
                             </constraints>
                             <state key="normal" image="ic_profile"/>
                         </button>
@@ -80,7 +80,7 @@
                         <constraint firstItem="hIU-iX-HqN" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="vW7-gJ-6y0" secondAttribute="trailing" constant="8" id="MeS-6K-Gsz"/>
                         <constraint firstItem="AU9-7j-OBp" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="18" id="YBy-hB-o0B"/>
                         <constraint firstAttribute="trailing" secondItem="AU9-7j-OBp" secondAttribute="trailing" constant="14" id="bHh-XG-DZZ"/>
-                        <constraint firstItem="AU9-7j-OBp" firstAttribute="leading" secondItem="fDB-kc-rRN" secondAttribute="trailing" constant="8" id="fi2-UE-uhe"/>
+                        <constraint firstItem="AU9-7j-OBp" firstAttribute="leading" secondItem="fDB-kc-rRN" secondAttribute="trailing" id="fi2-UE-uhe"/>
                         <constraint firstItem="fDB-kc-rRN" firstAttribute="leading" secondItem="IRb-o9-EA3" secondAttribute="trailing" constant="8" id="ghs-bU-d44"/>
                         <constraint firstItem="IRb-o9-EA3" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="18" id="qm1-ZR-DXU"/>
                         <constraint firstItem="hIU-iX-HqN" firstAttribute="top" secondItem="wX7-0v-Q3q" secondAttribute="top" constant="32" id="vP3-P2-hur"/>
@@ -91,7 +91,7 @@
                 <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" editable="NO" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="JED-dW-kCX">
                     <rect key="frame" x="20" y="84" width="335" height="503"/>
                     <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
-                    <mutableString key="text">NEW WORDS 1
+                    <string key="text">NEW WORDS 1
 
 - There are many variations of passages of Lorem Ipsum available. 
 
@@ -111,11 +111,11 @@
 
 -  All the Lorem Ipsum generators on the Internet tend to repeat predefined chunks.
 
--   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour </mutableString>
+-   There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour </string>
                     <fontDescription key="fontDescription" type="system" pointSize="16"/>
                     <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
                 </textView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh1-jx-lg4">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Hh1-jx-lg4">
                     <rect key="frame" x="295" y="587" width="60" height="60"/>
                     <constraints>
                         <constraint firstAttribute="width" constant="60" id="aGT-yB-hqq"/>

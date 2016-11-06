@@ -93,6 +93,9 @@ to Your Account</string>
                     <state key="normal" title="ALREADY HAVE AN ACCOUNT?">
                         <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
                     </state>
+                    <connections>
+                        <action selector="tapToClose:" destination="-1" eventType="touchUpInside" id="DjR-sF-Hsg"/>
+                    </connections>
                 </button>
             </subviews>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>

@@ -118,7 +118,7 @@ class DetailsNoteVC: UIViewController {
   }
 
   @IBAction func tapToShare(sender: AnyObject) {
-    let vc = ShareForVC()
+    let vc = ShareForVC(note: myNote)
     navigationController?.pushViewController(vc, animated: true)
   }
 }

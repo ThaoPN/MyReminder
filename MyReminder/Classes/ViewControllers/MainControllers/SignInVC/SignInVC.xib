@@ -52,13 +52,6 @@
                         <action selector="tapToSignin:" destination="-1" eventType="touchUpInside" id="8pJ-hq-ATh"/>
                     </connections>
                 </button>
-                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="zoO-jJ-DM9">
-                    <rect key="frame" x="20" y="451" width="335" height="30"/>
-                    <state key="normal" title="Sign Up"/>
-                    <connections>
-                        <action selector="tapToSignUp:" destination="-1" eventType="touchUpInside" id="7su-Ne-l3P"/>
-                    </connections>
-                </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHA-uI-hcs">
                     <rect key="frame" x="20" y="162" width="190.5" height="64.5"/>
                     <string key="text">Sign In 
@@ -81,7 +74,7 @@ to Your Account</string>
                         <constraint firstAttribute="width" constant="17" id="bQw-9e-duv"/>
                     </constraints>
                 </imageView>
-                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-2r-ccF">
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="9U4-2r-ccF">
                     <rect key="frame" x="15" y="619" width="109" height="28"/>
                     <fontDescription key="fontDescription" type="system" pointSize="13"/>
                     <state key="normal" title="Forgot Password?">
@@ -89,9 +82,12 @@ to Your Account</string>
                     </state>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="yaF-Bj-tB8">
-                    <rect key="frame" x="15" y="583" width="48" height="28"/>
-                    <fontDescription key="fontDescription" type="system" pointSize="13"/>
-                    <state key="normal" title="Sign Up">
+                    <rect key="frame" x="20" y="441" width="335" height="35"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="35" id="fgR-ak-fis"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="13"/>
+                    <state key="normal" title="CREATE ACCOUNT">
                         <color key="titleColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                     </state>
                     <connections>
@@ -102,9 +98,8 @@ to Your Account</string>
             <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
             <constraints>
                 <constraint firstItem="oay-Cp-62f" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="0Wf-uL-fhf"/>
+                <constraint firstItem="yaF-Bj-tB8" firstAttribute="top" secondItem="4rk-5F-c8U" secondAttribute="bottom" constant="10" id="11c-Ra-lNa"/>
                 <constraint firstAttribute="bottom" secondItem="oay-Cp-62f" secondAttribute="bottom" id="5gN-G7-qnm"/>
-                <constraint firstAttribute="trailing" secondItem="zoO-jJ-DM9" secondAttribute="trailing" constant="20" id="7PL-cK-FTj"/>
-                <constraint firstItem="zoO-jJ-DM9" firstAttribute="top" secondItem="4rk-5F-c8U" secondAttribute="bottom" constant="20" id="DQC-AE-Dqd"/>
                 <constraint firstItem="9o3-Uo-v4a" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="Dwb-c3-Se3"/>
                 <constraint firstItem="GzH-Hl-Tau" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="Dy1-P7-fdl"/>
                 <constraint firstItem="4rk-5F-c8U" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="GoN-bc-wHm"/>
@@ -113,19 +108,18 @@ to Your Account</string>
                 <constraint firstAttribute="trailing" secondItem="oay-Cp-62f" secondAttribute="trailing" id="OHx-Ch-sLr"/>
                 <constraint firstItem="9U4-2r-ccF" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="Prx-aP-XO4"/>
                 <constraint firstItem="j8O-rs-m91" firstAttribute="top" secondItem="xHA-uI-hcs" secondAttribute="bottom" constant="30" id="SVK-wS-7Yf"/>
-                <constraint firstItem="9U4-2r-ccF" firstAttribute="top" secondItem="yaF-Bj-tB8" secondAttribute="bottom" constant="8" id="di0-M6-xug"/>
                 <constraint firstAttribute="trailing" secondItem="4rk-5F-c8U" secondAttribute="trailing" constant="20" id="fFb-AY-nSz"/>
                 <constraint firstAttribute="bottom" secondItem="9U4-2r-ccF" secondAttribute="bottom" constant="20" id="fjf-Sk-UNI"/>
                 <constraint firstItem="9o3-Uo-v4a" firstAttribute="top" secondItem="j8O-rs-m91" secondAttribute="bottom" constant="20" id="gDt-3f-AvS"/>
                 <constraint firstItem="j8O-rs-m91" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="gfo-wc-sqp"/>
-                <constraint firstItem="zoO-jJ-DM9" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="hdK-Ad-MCe"/>
+                <constraint firstAttribute="trailing" secondItem="yaF-Bj-tB8" secondAttribute="trailing" constant="20" id="igz-p5-E60"/>
                 <constraint firstItem="8nT-E3-H3O" firstAttribute="centerY" secondItem="j8O-rs-m91" secondAttribute="centerY" id="ikw-Us-gfO"/>
-                <constraint firstItem="yaF-Bj-tB8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="15" id="lNB-iy-c69"/>
                 <constraint firstAttribute="trailing" secondItem="j8O-rs-m91" secondAttribute="trailing" constant="20" id="p70-V5-48Q"/>
                 <constraint firstItem="8nT-E3-H3O" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="30" id="sVq-uc-0ud"/>
                 <constraint firstItem="xHA-uI-hcs" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="tFY-jl-Bi0"/>
                 <constraint firstItem="xHA-uI-hcs" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" constant="162" id="uyk-sI-tw5"/>
                 <constraint firstItem="GzH-Hl-Tau" firstAttribute="centerY" secondItem="9o3-Uo-v4a" secondAttribute="centerY" id="vNx-VH-twl"/>
+                <constraint firstItem="yaF-Bj-tB8" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="w2w-yK-TGW"/>
                 <constraint firstAttribute="trailing" secondItem="9o3-Uo-v4a" secondAttribute="trailing" constant="20" id="zeZ-7o-qRt"/>
             </constraints>
             <simulatedScreenMetrics key="simulatedDestinationMetrics" type="retina47"/>
