@@ -189,11 +189,19 @@ extension MainScreenVC: KolodaViewDataSource {
     //card.setupCard(user)
     let note = notes[Int(index)]
     card.setupCard(note)
+    card.delegate = self
 
     return card
   }
 
   func koloda(koloda: KolodaView, viewForCardOverlayAtIndex index: UInt) -> OverlayView? {
     return NSBundle.mainBundle().loadNibNamed("OverlayView", owner: self, options: nil)[0] as? OverlayView
+  }
+}
+
+extension MainScreenVC: CustomSwipeCardViewDelegate {
+  func shareNote(note: Note) {
+    let vc = ShareForVC(note: note)
+    navigationController?.pushViewController(vc, animated: true)
   }
 }

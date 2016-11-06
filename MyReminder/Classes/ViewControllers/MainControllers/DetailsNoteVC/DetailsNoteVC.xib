@@ -11,6 +11,7 @@
                 <outlet property="btnHight" destination="JEp-9v-1dD" id="IK4-bl-XDl"/>
                 <outlet property="btnLow" destination="tbE-3U-h5U" id="1nE-Re-ZTc"/>
                 <outlet property="btnMedium" destination="13C-3N-b22" id="o03-EY-ick"/>
+                <outlet property="btnShare" destination="Hh1-jx-lg4" id="sxS-dk-QeS"/>
                 <outlet property="lblTitle" destination="hIU-iX-HqN" id="BYW-Jr-yTf"/>
                 <outlet property="txvContent" destination="JED-dW-kCX" id="bVs-SJ-Z6g"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>

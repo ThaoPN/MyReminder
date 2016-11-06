@@ -16,9 +16,11 @@ class DetailsNoteVC: UIViewController {
   @IBOutlet weak var btnLow: UIButton!
   @IBOutlet weak var lblTitle: UILabel!
   @IBOutlet weak var txvContent: UITextView!
+  @IBOutlet weak var btnShare: UIButton!
 
   // MARK: - Variables
   private var myNote: Note!
+  private var isMyNote = true
 
   // MARK: - Init methods
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -29,9 +31,10 @@ class DetailsNoteVC: UIViewController {
     super.init(coder: aDecoder)
   }
 
-  convenience init(note: Note) {
+  convenience init(note: Note, isMyNote: Bool = true) {
     self.init(nibName: nil, bundle: nil)
     myNote = note
+    self.isMyNote = isMyNote
   }
 
   // MARK: - Override methods
@@ -61,6 +64,11 @@ class DetailsNoteVC: UIViewController {
     lblTitle.text = myNote.nTitle
     txvContent.text = myNote.nContent
 
+    if isMyNote {
+      btnShare.hidden = false
+    } else {
+      btnShare.hidden = true
+    }
   }
 
   override func viewDidAppear(animated: Bool) {

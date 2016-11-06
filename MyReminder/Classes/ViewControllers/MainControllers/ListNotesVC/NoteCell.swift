@@ -44,6 +44,15 @@ class NoteCell: UITableViewCell {
     } else {
       lblPriority.backgroundColor = kColorLow
     }
+
+    if note.nOwner.characters.count > 0 {
+      let sharedBy = "Shared by \(note.nOwner)"
+      let attr = NSMutableAttributedString(string: sharedBy)
+      attr.addAttributes([NSFontAttributeName: UIFont.boldSystemFontOfSize(14)], range: (sharedBy as NSString).rangeOfString(note.nOwner))
+      lblOwner.attributedText = attr
+    } else {
+      lblOwner.text = ""
+    }
   }
 
 // MARK: - Private methods

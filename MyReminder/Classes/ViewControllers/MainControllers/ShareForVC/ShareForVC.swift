@@ -9,6 +9,8 @@
 import UIKit
 import pop
 import Async
+import ObjectMapper
+import Firebase
 
 class ShareForVC: UIViewController {
   // MARK: - Outlets
@@ -23,6 +25,7 @@ class ShareForVC: UIViewController {
   // MARK: - Variables
   private var users = [User]()
   private var isShowFinished = false
+  private var myNote: Note!
 
   // MARK: - Init methods
   override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: NSBundle?) {
@@ -33,8 +36,9 @@ class ShareForVC: UIViewController {
     super.init(coder: aDecoder)
   }
 
-  convenience init() {
+  convenience init(note: Note) {
     self.init(nibName: nil, bundle: nil)
+    myNote = note
   }
   // MARK: - Override methods
   override func viewDidLoad() {
@@ -59,12 +63,47 @@ class ShareForVC: UIViewController {
 
   // MARK: - Private methods
   private func fakeData() {
-    for _ in 1...10 {
-      let u = User()
-      u.uUsername = "abc"
-      users.append(u)
+    let ref = FIRDatabase.database().reference()
+    DHIndicator.show()
+    
+    var handle: FIRDatabaseHandle! = nil
+    
+    func removeObs() {
+      ref.removeObserverWithHandle(handle)
     }
-    tableView.reloadData()
+    
+    handle = ref.child("Users").queryOrderedByKey().observeEventType(.Value, withBlock: {[weak self] (snapshot) in
+      guard let strongSelf = self else { return }
+
+      print(snapshot.value)
+      for sn in snapshot.children.allObjects as! [FIRDataSnapshot] {
+      if let user = Mapper<User>().map(sn.value) {
+        if user.uUsername != AppDelegate.shareInstance().currentUser.uUsername && strongSelf.checkExisted(user) == false {
+          strongSelf.users.append(user)
+        }
+      }
+      }
+      DHIndicator.hide()
+      strongSelf.tableView.reloadData()
+    })
+    
+    
+
+//    for _ in 1...10 {
+//      let u = User()
+//      u.uUsername = "abc"
+//      users.append(u)
+//    }
+    
+  }
+  
+  private func checkExisted(user: User) -> Bool {
+    for u in users {
+      if u.uUsername == user.uUsername {
+        return true
+      }
+    }
+    return false
   }
 
   private func showFinishedView() {
@@ -92,7 +131,42 @@ class ShareForVC: UIViewController {
       self.hideFinishedView()
     }
   }
+  
+  private func shareWithIndex(index: Int) {
+    let u = users[index]
+    showFinishedView()
+    postNote(u)
+  }
 
+  private func postNote(user: User) {
+    
+    let UUID = NSUUID().UUIDString
+    
+    let strNoteTitle = myNote.nTitle
+    let strCreateAt = myNote.nCreated
+    let info = [KeyNote.noteContent: myNote.nContent,
+                KeyNote.noteID: UUID,
+                KeyNote.notePriority: myNote.nPriority,
+                KeyNote.noteTitle: strNoteTitle,
+                KeyNote.noteCreatedAt: strCreateAt,
+                KeyNote.noteOwner: AppDelegate.shareInstance().currentUser.uUsername]
+    
+    //DHIndicator.show()
+    if let currentUser = AppDelegate.shareInstance().currentUser, ref = currentUser.uRef {
+      ref.child("\(user.uID)/\(KeyUser.userSharedNote)/\(UUID)").setValue(info, withCompletionBlock: {[weak self] (error, noteRef) in
+//        guard let strongSelf = self else { return }
+        
+        //DHIndicator.hide()
+        if let error = error {
+          print("post note error: \(error.localizedDescription)")
+          Common.showAlertWithHUD(error.localizedDescription)
+        } else {
+//          strongSelf.navigationController?.popViewControllerAnimated(true)
+        }
+      })
+    }
+  }
+  
   private func hideFinishedView() {
     viewFinishedShare.alpha = 0
     consWidthViewFinished.constant = 0
@@ -137,6 +211,6 @@ extension ShareForVC: UITableViewDelegate {
     tableView.deselectRowAtIndexPath(indexPath, animated: true)
     users[indexPath.row].isSelected = true
     tableView.reloadData()
-    showFinishedView()
+    shareWithIndex(indexPath.row)
   }
 }

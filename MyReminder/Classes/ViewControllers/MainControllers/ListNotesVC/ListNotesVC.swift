@@ -196,3 +196,19 @@ extension ListNotesVC: UITableViewDataSource {
     return cell
   }
 }
+
+extension ListNotesVC: UITableViewDelegate {
+  func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
+    tableView.deselectRowAtIndexPath(indexPath, animated: true)
+
+    var note: Note!
+    if isMyNote {
+      note = myNotes[indexPath.row]
+    } else {
+      note = sharedNotes[indexPath.row]
+    }
+
+    let vc = DetailsNoteVC(note: note, isMyNote: isMyNote)
+    navigationController?.pushViewController(vc, animated: true)
+  }
+}
